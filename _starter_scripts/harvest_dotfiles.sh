@@ -4,17 +4,17 @@ set -eo pipefail
 echo '##################    Harvesting files...    ##################'
 
 echo "Harvest .config directory."
-cp -r ~/.config/alacritty ${PWD%/*}"/"
-cp -r ~/.config/gtk-3.0 ${PWD%/*}"/"
-rsync -a ~/.config/nvim ${PWD%/*}"/" --exclude plugin
-cp -r ~/.config/picom ${PWD%/*}"/"
-cp -r ~/.config/polybar ${PWD%/*}"/"
-cp -r ~/.config/volumeicon ${PWD%/*}"/"
-cp -r ~/.config/dunst ${PWD%/*}"/"
-cat ~/.config/mimeapps.list > ${PWD%/*}"/mimeapps.list"
-cp -r ~/.config/qt5ct ${PWD%/*}"/"
-cp -r ~/.config/lf ${PWD%/*}"/"
-cp -r ~/.config/rofi ${PWD%/*}"/"
+cp -r ~/.config/alacritty ${PWD%/*}"/.config/"
+cp -r ~/.config/gtk-3.0 ${PWD%/*}"/.config/"
+rsync -a ~/.config/nvim ${PWD%/*}"/.config/" --exclude plugin
+cp -r ~/.config/picom ${PWD%/*}"/.config/"
+cp -r ~/.config/polybar ${PWD%/*}"/.config/"
+cp -r ~/.config/volumeicon ${PWD%/*}"/.config/"
+cp -r ~/.config/dunst ${PWD%/*}"/.config/"
+cat ~/.config/mimeapps.list > ${PWD%/*}"/.config/mimeapps.list"
+cp -r ~/.config/qt5ct ${PWD%/*}"/.config/"
+cp -r ~/.config/lf ${PWD%/*}"/.config/"
+cp -r ~/.config/rofi ${PWD%/*}"/.config/"
 
 echo "Harvest .i3 directory."
 cp -r ~/.i3  ${PWD%/*}"/"
