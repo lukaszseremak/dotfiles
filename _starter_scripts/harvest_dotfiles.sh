@@ -35,12 +35,12 @@ echo 'Harvest gtkrc-2.0 file.'
 cat ~/.gtkrc-2.0 > ${PWD%/*}"/gtkrc-2.0"
 
 echo "Harvest fonts."
-cp -r "/usr/share/fonts/DaddyTimeMono" ${PWD%/*}"/.fonts/"
-cp -r "/usr/share/fonts/Feather" ${PWD%/*}"/.fonts/"
-cp -r "/usr/share/fonts/fontawesome" ${PWD%/*}"/.fonts/"
+cp -r /usr/share/fonts/DaddyTimeMono ${PWD%/*}"/.fonts/"
+cp -r /usr/share/fonts/Feather ${PWD%/*}"/.fonts/"
+cp -r /usr/share/fonts/fontawesome ${PWD%/*}"/.fonts/"
 
 echo "Harvest icons."
-cp -r "/usr/share/icons/fontawesome" ${PWD%/*}"/.icons/fontawesome"
+cp -r /usr/share/icons/fontawesome ${PWD%/*}"/.icons/"
 
 echo "Harvest custom themes."
 cp -r ~/.themes/ ${PWD%/*}"/"
