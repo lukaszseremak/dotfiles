@@ -1,0 +1,36 @@
+[user]
+        name =  Seremak Lukasz
+        email = lukasz.seremak@nokia.com
+[web]
+        browser = chromium
+[color]
+	ui = auto
+[color "branch"]
+	current = yellow bold
+	local = green bold
+	remote = cyan bold
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[color "status"]
+	added = green bold
+	changed = yellow bold
+        untracked = red bold
+[diff]
+	tool = meld
+[mergetool]
+	tool = meld
+[difftool]
+        prompt = false
+[core]
+	editor = vim
+	excludesfile = /home/seremak/.gitignore_global
+[alias]
+        d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+        s = !"git status"
+        ls =  log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+[diff "sopsdiffer"]
+	textconv = sops -d
