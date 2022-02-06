@@ -40,7 +40,7 @@ cp -r "/usr/share/fonts/Feather" ${PWD%/*}"/.fonts/"
 cp -r "/usr/share/fonts/fontawesome" ${PWD%/*}"/.fonts/"
 
 echo "Harvest icons."
-cp -r "/usr/share/icons/fontawesome" ${PWD%/*}"/.icons/"
+cp -r "/usr/share/icons/fontawesome" ${PWD%/*}"/.icons/fontawesome"
 
 echo "Harvest custom themes."
 cp -r ~/.themes/ ${PWD%/*}"/"
@@ -53,4 +53,3 @@ cp ~/.local/bin/blurlock ${PWD%/*}"/.local/bin/blurlock"
 cp ~/.local/bin/changevolume ${PWD%/*}"/.local/bin/changevolume"
 cp ~/.local/bin/lfrun ${PWD%/*}"/.local/bin/lfrun"
 cp ~/.local/bin/screenshot ${PWD%/*}"/.local/bin/screenshot"
-
