@@ -1,0 +1,46 @@
+@theme "/dev/null"
+
+@import "colors.rasi"
+
+window {
+  transparency: "real";
+  width: 3.6%;
+  height: 18.6%;
+  location: east;
+  x-offset: -15px;
+  border-radius: 15px;
+  border-color: @foreground;
+  border: 2;
+}
+
+mainbox {
+  children: [ listview ];
+}
+
+listview {
+  columns: 1;
+  cycle: true;
+  dynamic: true;
+  layout: vertical;
+  padding: 10px;
+}
+
+element {
+  text-color: @foreground;
+  padding: 0px 0px 0px 0px;
+  border-radius: 10px;
+}
+
+element-text {
+  margin: 10px 10px 10px 15px;
+  padding: 5px 5px 5px 5px;
+  font: "DaddyTimeMono Nerd Font 29";
+  background-color: inherit;
+  text-color: inherit;
+}
+element selected {
+  background-color: @foreground;
+  text-color: @background;
+}
+
+/* vim: ft=sass

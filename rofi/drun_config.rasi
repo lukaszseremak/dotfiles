@@ -1,0 +1,88 @@
+configuration {
+  display-drun: "Applications:";
+  drun-display-format: "{name}";
+  font: "DaddyTimeMono Nerd Font 14";
+  modi: "drun";
+  show-icons: true;
+  icon-theme: "Papirus";
+}
+
+@theme "/dev/null"
+
+@import "colors.rasi"
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+}
+
+window {
+  width: 20%;
+  border-color: @foreground;
+  border-radius: 10px;
+  border: 2;
+}
+
+element {
+  padding: 8 0;
+  text-color: @foreground-alt;
+}
+
+element-icon {
+    margin: 0 7px 0 5px;
+    background-color: @transparent;
+    text-color: inherit;
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    size: 64px;
+    border: 0px;
+}
+
+element selected {
+  text-color: @background;
+  background-color: @foreground;
+  border-radius: 10px;
+}
+
+element-text {
+  background-color: inherit;
+  text-color: inherit;
+  vertical-align: 0.5;
+}
+
+element-icon {
+  size: 30;
+}
+
+entry {
+  background-color: @foreground;
+  padding: 12;
+  text-color: @background;
+}
+
+inputbar {
+  children: [prompt, entry];
+}
+
+listview {
+  padding: 8 12;
+  background-color: @background;
+  columns: 1;
+  lines: 8;
+}
+
+mainbox {
+  background-color: @background;
+  children: [inputbar, listview];
+}
+
+prompt {
+  background-color: @foreground;
+  enabled: true;
+  padding: 12 0 0 12;
+  text-color: @background;
+}
+
+/* vim: ft=sass

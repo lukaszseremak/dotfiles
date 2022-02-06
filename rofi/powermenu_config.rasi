@@ -1,0 +1,72 @@
+configuration {
+  drun-display-format: "{name}";
+  font: "DaddyTimeMono Nerd Font 15";
+  modi: "drun";
+}
+
+@theme "/dev/null"
+
+@import "colors.rasi"
+
+window {
+  width: 12%;
+  height: 17%;
+  border-radius: 10px;
+  location: center;
+  border-color: @foreground;
+  border: 2;
+}
+
+element {
+  padding: 8 0;
+  text-color: @foreground-alt;
+}
+
+element selected {
+  text-color: @background;
+  background-color: @foreground;
+  border-radius: 10px;
+}
+
+element-text {
+  background-color: inherit;
+  text-color: inherit;
+  horizontal-align: 0.5;
+  vertical-align: 0.5;
+
+}
+
+element-icon {
+  size: 30;
+}
+
+entry {
+  background-color: @foreground;
+  padding: 12;
+  text-color: @background;
+}
+
+inputbar {
+  children: [prompt, entry];
+}
+
+listview {
+  padding: 8 12;
+  background-color: @background;
+  columns: 1;
+  lines: 8;
+}
+
+mainbox {
+  background-color: @background;
+  children: [inputbar, listview];
+}
+
+prompt {
+  background-color: @foreground;
+  enabled: true;
+  padding: 12 0 0 12;
+  text-color: @background;
+}
+
+/* vim: ft=sass
