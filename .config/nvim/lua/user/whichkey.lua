@@ -75,6 +75,14 @@ local mappings = {
 	["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
 	["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 
+	a = {
+		name = "Annotations",
+		c = { "<cmd>Neogen class<cr>", "Generate class annotation" },
+		f = { "<cmd>Neogen func<cr>", "Generate function annotation" },
+		i = { "<cmd>Neogen file<cr>", "Generate file annotation" },
+		t = { "<cmd>Neogen type<cr>", "Generate type annotation" },
+	},
+
 	p = {
 		name = "Packer",
 		c = { "<cmd>PackerCompile<cr>", "Compile" },
