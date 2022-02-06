@@ -2,17 +2,17 @@
 set -eo pipefail
 
 echo "Copy .config directory."
-cp -r ${PWD%/*}"/alacritty" ~/.config/
-cp -r ${PWD%/*}"/gtk-3.0" ~/.config/
-cp -r ${PWD%/*}"/nvim" ~/.config/
-cp -r ${PWD%/*}"/picom" ~/.config/
-cp -r ${PWD%/*}"/polybar" ~/.config/
-cp -r ${PWD%/*}"/volumeicon" ~/.config/
-cp -r ${PWD%/*}"/dunst" ~/.config/
-cat ${PWD%/*}"/mimeapps.list" > ~/.config/mimeapps.list
-cp -r ${PWD%/*}"/qt5ct" ~/.config/
-cp -r ${PWD%/*}"/lf" ~/.config/
-cp -r ${PWD%/*}"/rofi" ~/.config/
+cp -r ${PWD%/*}"/.config/alacritty" ~/.config/
+cp -r ${PWD%/*}"/.config/gtk-3.0" ~/.config/
+cp -r ${PWD%/*}"/.config/nvim" ~/.config/
+cp -r ${PWD%/*}"/.config/picom" ~/.config/
+cp -r ${PWD%/*}"/.config/polybar" ~/.config/
+cp -r ${PWD%/*}"/.config/volumeicon" ~/.config/
+cp -r ${PWD%/*}"/.config/dunst" ~/.config/
+cat ${PWD%/*}"/.config/mimeapps.list" > ~/.config/mimeapps.list
+cp -r ${PWD%/*}"/.config/qt5ct" ~/.config/
+cp -r ${PWD%/*}"/.config/lf" ~/.config/
+cp -r ${PWD%/*}"/.config/rofi" ~/.config/
 
 echo "Copy .i3 directory."
 cp -r  ${PWD%/*}"/.i3" ~/
