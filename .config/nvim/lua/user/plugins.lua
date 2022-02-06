@@ -79,6 +79,8 @@ return packer.startup(function(use)
 			{ "nvim-telescope/telescope.nvim" },
 		},
 	})
+	use("danymat/neogen")
+
 	-- Colorschemes
 	use("lukaszseremak/spacegrayy")
 
