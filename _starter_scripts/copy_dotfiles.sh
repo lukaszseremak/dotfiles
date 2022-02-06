@@ -2,31 +2,31 @@
 set -eo pipefail
 
 echo "Copy .config directory."
+cat ${PWD%/*}"/.config/mimeapps.list" > ~/.config/mimeapps.list
 cp -r ${PWD%/*}"/.config/alacritty" ~/.config/
+cp -r ${PWD%/*}"/.config/dunst" ~/.config/
 cp -r ${PWD%/*}"/.config/gtk-3.0" ~/.config/
+cp -r ${PWD%/*}"/.config/lf" ~/.config/
 cp -r ${PWD%/*}"/.config/nvim" ~/.config/
 cp -r ${PWD%/*}"/.config/picom" ~/.config/
 cp -r ${PWD%/*}"/.config/polybar" ~/.config/
-cp -r ${PWD%/*}"/.config/volumeicon" ~/.config/
-cp -r ${PWD%/*}"/.config/dunst" ~/.config/
-cat ${PWD%/*}"/.config/mimeapps.list" > ~/.config/mimeapps.list
 cp -r ${PWD%/*}"/.config/qt5ct" ~/.config/
-cp -r ${PWD%/*}"/.config/lf" ~/.config/
 cp -r ${PWD%/*}"/.config/rofi" ~/.config/
+cp -r ${PWD%/*}"/.config/volumeicon" ~/.config/
 
 echo "Copy .i3 directory."
 cp -r  ${PWD%/*}"/.i3" ~/
 
 echo 'Copy .bash files.'
-cat ${PWD%/*}"/.bashrc" > ~/.bashrc
 cat ${PWD%/*}"/.bash_profile" > ~/.bash_profile
 cat ${PWD%/*}"/.bash_prompt" > ~/.bash_prompt
+cat ${PWD%/*}"/.bashrc" > ~/.bashrc
 cat ${PWD%/*}"/.dir_colors" > ~/.dir_colors
 cat ${PWD%/*}"/.profile" > ~/.profile
 
 echo 'Copy git files.'
-cat ${PWD%/*}"/.gitignore_global" > ~/.gitignore_global
 cat ${PWD%/*}"/.gitconfig" > ~/.gitconfig
+cat ${PWD%/*}"/.gitignore_global" > ~/.gitignore_global
 
 echo 'Copy gtkrc-2.0 file.'
 cat > ${PWD%/*}"/gtkrc-2.0" ~/.gtkrc-2.0
