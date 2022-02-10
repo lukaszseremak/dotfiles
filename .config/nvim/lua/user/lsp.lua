@@ -11,7 +11,7 @@ local on_attach = function(client, bufnr)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
 end
 
-local servers = { "pyright", "rust_analyzer", "tsserver" }
+local servers = { "bashls", "pyright" }
 for _, lsp in pairs(servers) do
 	require("lspconfig")[lsp].setup({
 		on_attach = on_attach,
