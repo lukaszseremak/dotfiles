@@ -23,9 +23,8 @@ alias yay="yay --devel --timeupdate --sudoloop --answerclean All --answeredit No
 
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-FZT_CUSTOM='ag --hidden --ignore-dir={.git,.local,.cache,.config/chromium,.cargo,.tox} -g ""'
-export FZF_DEFAULT_COMMAND=$FZT_CUSTOM
-export FZF_CTRL_T_COMMAND=$FZT_CUSTOM
+export FZF_CTRL_T_COMMAND='ag --hidden --ignore-dir={.git} -g ""'
+export FZF_ALT_C_COMMAND='fd --hidden --exclude .git --exclude .cache --exclude Cache --type directory . $PWD'
 
 [[ -f ~/.bash_prompt ]] && . ~/.bash_prompt
 [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
