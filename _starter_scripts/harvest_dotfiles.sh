@@ -7,6 +7,7 @@ echo "Harvest .config directory."
 cat ~/.config/mimeapps.list > ${PWD%/*}"/.config/mimeapps.list"
 cp -r ~/.config/alacritty ${PWD%/*}"/.config/"
 cp -r ~/.config/dunst ${PWD%/*}"/.config/"
+cp -r ~/.config/fd ${PWD%/*}"/.config/"
 cp -r ~/.config/gtk-3.0 ${PWD%/*}"/.config/"
 cp -r ~/.config/gtk-4.0 ${PWD%/*}"/.config/"
 cp -r ~/.config/lf ${PWD%/*}"/.config/"
@@ -29,7 +30,7 @@ cat ~/.profile > ${PWD%/*}"/.profile"
 
 echo 'Harvest git config files.'
 cat ~/.gitconfig > ${PWD%/*}"/.gitconfig"
-cat ~/.gitignore_global > ${PWD%/*}"/.gitignore_global"
+cat ~/.gitignore > ${PWD%/*}"/.gitignore_global"
 
 echo 'Harvest gtkrc-2.0 file.'
 cat ~/.gtkrc-2.0 > ${PWD%/*}"/gtkrc-2.0"
