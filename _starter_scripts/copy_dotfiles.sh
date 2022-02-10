@@ -13,6 +13,7 @@ cp -r ${PWD%/*}"/.config/polybar" ~/.config/
 cp -r ${PWD%/*}"/.config/qt5ct" ~/.config/
 cp -r ${PWD%/*}"/.config/rofi" ~/.config/
 cp -r ${PWD%/*}"/.config/volumeicon" ~/.config/
+cp -r ${PWD%/*}"/.config/fd" ~/.config/
 
 echo "Copy .i3 directory."
 cp -r  ${PWD%/*}"/.i3" ~/
@@ -26,7 +27,7 @@ cat ${PWD%/*}"/.profile" > ~/.profile
 
 echo 'Copy git files.'
 cat ${PWD%/*}"/.gitconfig" > ~/.gitconfig
-cat ${PWD%/*}"/.gitignore_global" > ~/.gitignore_global
+cat ${PWD%/*}"/.gitignore_global" > ~/.gitignore
 
 echo 'Copy gtkrc-2.0 file.'
 cat > ${PWD%/*}"/gtkrc-2.0" ~/.gtkrc-2.0

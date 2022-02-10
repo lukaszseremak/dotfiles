@@ -4,6 +4,7 @@ if not status_ok then
 end
 
 neoclip.setup({
-	enable_persistant_history = true,
+  enable_persistent_history = true,
   default_register = {"unnamed", "star", "plus", "unnamedplus"},
+  db_path = vim.fn.stdpath("data") .. "/databases/neoclip.sqlite3",
 })

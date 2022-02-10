@@ -65,19 +65,14 @@ coverage.xml
 # Sphinx documentation
 docs/_build/
 
-# pyenv
-.python-version
-
 # virtualenv
 venv_*
 
 # vs code
 .vscode/
 
-#aipa files
+#temp project files
 app.py
-config.yml
-config_prod.yml
 
 # rain files
 kube-config
@@ -90,3 +85,12 @@ ops/
 pyrightconfig.json
 .python-version
 .env
+
+# linux related files
+*cache*
+*Cache*
+*BraveSoftware*
+*chromium*
+*google-chrome*
+*Microsoft*
+*ICAClient*

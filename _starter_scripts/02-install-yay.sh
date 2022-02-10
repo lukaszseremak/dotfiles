@@ -19,6 +19,7 @@ else
     [ -d /tmp/yay ] && rm -rf /tmp/yay
 
     if pacman -Qi $package &> /dev/null; then
+        yay --devel --timeupdate --sudoloop --answerclean All --answeredit None --answerdiff None --useask --removemake --redownload --rebuildall --save
         echo "##################    "$package" has been installed.    ##################"
     else
         echo "!!!!!!!!!!!!!!!!!!    "$package" has NOT been installed.    !!!!!!!!!!!!!!!!!!"

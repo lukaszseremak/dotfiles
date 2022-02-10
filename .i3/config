@@ -54,6 +54,7 @@ bindsym $mod+Print exec --no-startup-id screenshot
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
 exec_always --no-startup-id killall -USR1 volumeicon
+exec_always --no-startup-id killall -USR1 xautolock
 
 bindsym XF86AudioRaiseVolume exec changevolume up
 bindsym XF86AudioLowerVolume exec changevolume down
