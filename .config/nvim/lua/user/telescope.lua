@@ -75,8 +75,13 @@ telescope.setup({
 				["?"] = actions.which_key,
 			},
 		},
+		file_ignore_patterns = { ".git/" },
 	},
-	pickers = {},
+	pickers = {
+		find_files = {
+			hidden = true,
+		},
+	},
 	extensions = {
 		fzf = {
 			fuzzy = true,

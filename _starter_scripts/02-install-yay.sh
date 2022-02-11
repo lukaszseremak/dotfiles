@@ -27,10 +27,10 @@ else
 fi
 
 echo "Adding options to Pacman conf file."
-sudo cat << END >> /etc/pacman.conf
+sudo bash -c 'cat << END >> /etc/pacman.conf
 
 UseSyslog
 Color
 CheckSpace
 VerbosePkgLists
-END
+END'
