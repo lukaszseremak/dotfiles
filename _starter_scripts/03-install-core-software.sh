@@ -1,55 +1,45 @@
 #!/usr/bin/env bash
 set -eo pipefail
 
-#software from 'normal' repositories
-sudo pacman -S --noconfirm --needed \
+echo "Install packages using yay."
+yay -S --needed \
+	alacritty \
 	arandr \
+	aritim-dark-gtk-git \
+	brave-browser-beta \
+	chromium \
 	cmake \
 	curl \
 	dbus \
+	docker-compose \
 	downgrade \
 	dunst \
 	dunstify \
 	evince \
-	filezilla \
-	gimp \
-	git \
-	htop \
-	imagemagick \
-	meld \
-	nitrogen \
-	papirus-icon-theme \
-	screenfetch \
-	scrot \
-	unrar \
-	unzip \
-	vlc \
-	wget \
-	zip
-
-echo "Install packages using yay."
-yay -S --needed \
-	alacritty \
-	aritim-dark-gtk-git \
-	brave-browser-beta \
-	chromium \
-	docker-compose \
 	fd \
+	filezilla \
 	flake8 \
 	fzf \
+	gimp \
+	git \
 	google-chrome-beta \
 	highlight \
+	htop \
 	i3-gaps \
+	imagemagick \
 	libcurl-gnutls \
 	lxappearance-gtk3 \
 	manjaro-pipewire \
+	meld \
 	neofetch \
 	neovim \
 	neovim-symlinks \
+	nitrogen \
 	nodejs \
 	notepadqq \
 	npm \
 	openssh \
+	papirus-icon-theme \
 	picom-git \
 	playerctl \
 	polybar \
@@ -62,6 +52,8 @@ yay -S --needed \
 	qt5ct \
 	ripgrep \
 	rofi \
+	screenfetch \
+	scrot \
 	shfmt \
 	sof-firmware \
 	sshpass \
@@ -69,8 +61,14 @@ yay -S --needed \
 	teams \
 	the_silver_searcher \
 	unixodbc \
+	unrar \
+	unzip \
+	vlc \
 	volumeicon \
-	yarn
+	wget \
+	yarn \
+	zip \
+	jq
 
 echo "Install nautilus with gadgets."
 yay -S nautilus nautilus-open-any-terminal
@@ -80,16 +78,34 @@ gsettings set com.github.stunkymonkey.nautilus-open-any-terminal keybindings '<C
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal new-tab true
 
 echo "Install lf with gadgets."
-yay -S lf ffmpegthumbnailer imagemagick poppler gnome-epub-thumbnailer wkhtmltopdf bat chafa catdoc docx2txt odt2txt gnumeric perl-image-exiftool transmission-gtk transmission-cli
+yay -S --needed \
+	bat \
+	catdoc \
+	chafa \
+	docx2txt \
+	ffmpegthumbnailer \
+	gnome-epub-thumbnailer \
+	gnumeric \
+	imagemagick \
+	lf \
+	odt2txt \
+	perl-image-exiftool \
+	poppler \
+	transmission-cli \
+	transmission-gtk \
+	wkhtmltopdf
 
 echo "Install and config bluetooth."
 yay -S bluez bluez-utils
 modprobe btusb
 sudo systemctl start --now bluetooth.service
 sudo systemctl enable bluetooth.service
-sudo cat <<END >/etc/bluetooth/main.conf
-AutoEnable=True
-END
+if grep -Fxq "AutoEnable=True" /etc/bluetooth/main.conf; then
+	echo "bluetooth is auto enabled."
+else
+	echo "auto enabling bluetooth."
+	echo 'AutoEnable=True' | sudo tee -a /etc/bluetooth/main.conf
+fi
 
 echo 'Install and set virtualenv.'
 python -m pip install --user virtualenv
@@ -101,12 +117,12 @@ echo 'Install pyenv.'
 curl https://pyenv.run | bash
 
 echo 'Install nvim required packages.'
-pip install --user pynvim
-pip install --user doq
-pip install --user pyright
 pip install --user djhtml
+pip install --user doq
+pip install --user pynvim
+pip install --user pyright
 pip install 'python-lsp-server[all]'
-sudo npm i -g neovim
 sudo npm i -g bash-language-server
+sudo npm i -g neovim
 
 echo "##################    Core software installed.    ##################"

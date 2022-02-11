@@ -5,6 +5,7 @@ echo "Copy .config directory."
 cat ${PWD%/*}"/.config/mimeapps.list" > ~/.config/mimeapps.list
 cp -r ${PWD%/*}"/.config/alacritty" ~/.config/
 cp -r ${PWD%/*}"/.config/dunst" ~/.config/
+cp -r ${PWD%/*}"/.config/fd" ~/.config/
 cp -r ${PWD%/*}"/.config/gtk-3.0" ~/.config/
 cp -r ${PWD%/*}"/.config/lf" ~/.config/
 cp -r ${PWD%/*}"/.config/nvim" ~/.config/
@@ -13,7 +14,6 @@ cp -r ${PWD%/*}"/.config/polybar" ~/.config/
 cp -r ${PWD%/*}"/.config/qt5ct" ~/.config/
 cp -r ${PWD%/*}"/.config/rofi" ~/.config/
 cp -r ${PWD%/*}"/.config/volumeicon" ~/.config/
-cp -r ${PWD%/*}"/.config/fd" ~/.config/
 
 echo "Copy .i3 directory."
 cp -r  ${PWD%/*}"/.i3" ~/
