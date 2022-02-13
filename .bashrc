@@ -5,20 +5,23 @@ export GPG_TTY=$(tty)
 export BROWSER=/usr/bin/chromium
 export EDITOR=/usr/bin/nvim
 
-stty -ixon              # Disable ctrl-s and ctrl-q.
-shopt -s autocd         #Allows you to cd into directory merely by typing the directory name.
-HISTSIZE= HISTFILESIZE= # Infinite history.
+stty -ixon
+shopt -s autocd
+export HISTSIZE=5000
+export HISTFILESIZE=5000
 use_color=true
 set -o vi
 export LS_OPTIONS='-hN --color=auto --group-directories-first'
 eval "$(dircolors -b)"
 alias ls='ls $LS_OPTIONS'
-alias ccat="highlight --out-format=ansi" # Color cat - print file with syntax highlighting.
-alias grep="grep --color=auto"           # Color grep - highlight desired sequence.
+alias ccat="highlight --out-format=ansi"
+alias grep="grep --color=auto"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-export FZF_CTRL_T_COMMAND='ag --hidden --ignore-dir={.git} -g ""'
-export FZF_ALT_C_COMMAND='fd --hidden --exclude .git --exclude .cache --exclude Cache --type directory . $PWD'
+export FZF_PREVIEW_COMMAND="bat --style=numbers,changes --wrap never --color always {} || ccat {}"
+export FZF_CTRL_T_OPTS="--min-height 30 --preview-window right:60% --preview-window noborder --preview '($FZF_PREVIEW_COMMAND) 2> /dev/null'"
+export FZF_CTRL_T_COMMAND='ag --hidden -g ""'
+export FZF_ALT_C_COMMAND='fd --hidden --type directory . $PWD'
 
 [[ -f ~/.bash_prompt ]] && . ~/.bash_prompt
 [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
