@@ -19,12 +19,11 @@ key_bindings:
 
 draw_bold_text_with_bright_colors: true
 
-# Colors (Ayu Dark)
 colors:
   # Default colors
   primary:
     background: '#0B0B12'
-    foreground: '#B3B1AD'
+    foreground: '#D9E0EE'
 
   # Normal colors
   normal:
@@ -40,12 +39,12 @@ colors:
   # Bright colors
   bright:
     black:   '#686868'
-    red:     '#F07178'
-    green:   '#C2D94C'
-    yellow:  '#FFB454'
-    blue:    '#59C2FF'
-    magenta: '#FFEE99'
-    cyan:    '#95E6CB'
+    red:     '#F28FAD'
+    green:   '#81b888'
+    yellow:  '#FAE3B0'
+    blue:    '#96CDFB'
+    magenta: '#F8BD96'
+    cyan:    '#B5E8E0'
     white:   '#D9E0EE'
 
 font:
