@@ -58,3 +58,5 @@ map C clear
 
 # Movement
 # map gd cd ~/documents
+
+/* vim: ft=vim
