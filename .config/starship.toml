@@ -5,10 +5,14 @@ success_symbol = "[➜](bold green)"
 error_symbol = "[➜](bold red)"
 
 [directory]
-style = "bold fg:blue"
+truncation_length = 1
+style = "bold fg:cyan"
 
 [git_branch]
 symbol = " "
+
+[line_break]
+disabled = true
 
 [python]
 format ='[(\($virtualenv\) )]($style)'
