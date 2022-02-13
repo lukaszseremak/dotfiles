@@ -4,7 +4,7 @@ set -eo pipefail
 if [ $VIRTUAL_ENV ]; then
 	echo "VIRTUAL_ENV: ${VIRTUAL_ENV} was detected."
 else
-	echo "Did not found any VIRTUAL_ENV. There is nothing to do there"
+	echo "Did not found any VIRTUAL_ENV. There is nothing to do here."
 	exit 0
 fi
 

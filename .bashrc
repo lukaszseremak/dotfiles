@@ -1,16 +1,12 @@
-#
-# ~/.bashrc
-#
-
 export DOWNGRADE_FROM_ALA=1
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
+export GPG_TTY=$(tty)
 export BROWSER=/usr/bin/chromium
 export EDITOR=/usr/bin/nvim
 
-
-stty -ixon # Disable ctrl-s and ctrl-q.
-shopt -s autocd #Allows you to cd into directory merely by typing the directory name.
+stty -ixon              # Disable ctrl-s and ctrl-q.
+shopt -s autocd         #Allows you to cd into directory merely by typing the directory name.
 HISTSIZE= HISTFILESIZE= # Infinite history.
 use_color=true
 set -o vi
@@ -18,9 +14,7 @@ export LS_OPTIONS='-hN --color=auto --group-directories-first'
 eval "$(dircolors -b)"
 alias ls='ls $LS_OPTIONS'
 alias ccat="highlight --out-format=ansi" # Color cat - print file with syntax highlighting.
-alias grep="grep --color=auto" # Color grep - highlight desired sequence.
-alias yay="yay --devel --timeupdate --sudoloop --answerclean All --answeredit None --answerdiff None --useask"
-
+alias grep="grep --color=auto"           # Color grep - highlight desired sequence.
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 export FZF_CTRL_T_COMMAND='ag --hidden --ignore-dir={.git} -g ""'
@@ -39,8 +33,8 @@ eval "$(pyenv virtualenv-init -)"
 
 echo -e "\e]2;Alacritty: $PWD\007"
 cd() {
-    builtin cd "$@"
-    echo -e "\e]2;Alacritty: $PWD\007\c"
+	builtin cd "$@"
+	echo -e "\e]2;Alacritty: $PWD\007\c"
 }
 
 alias lf=lfrun
@@ -207,3 +201,5 @@ ex=:\
 *.pdf=:\
 *.nix=:\
 "
+
+eval "$(starship init bash)"
