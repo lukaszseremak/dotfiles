@@ -1,0 +1,14 @@
+add_newline = false
+
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[➜](bold red)"
+
+[directory]
+style = "bold fg:blue"
+
+[git_branch]
+symbol = " "
+
+[python]
+format ='[(\($virtualenv\) )]($style)'

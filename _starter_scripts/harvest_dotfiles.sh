@@ -5,6 +5,7 @@ echo '##################    Harvesting files...    ##################'
 
 echo "Harvest .config directory."
 cat ~/.config/mimeapps.list > ${PWD%/*}"/.config/mimeapps.list"
+cat ~/.config/starship.toml > ${PWD%/*}"/.config/starship.toml"
 cp -r ~/.config/alacritty ${PWD%/*}"/.config/"
 cp -r ~/.config/dunst ${PWD%/*}"/.config/"
 cp -r ~/.config/fd ${PWD%/*}"/.config/"
@@ -23,7 +24,6 @@ cp -r ~/.i3  ${PWD%/*}"/"
 
 echo 'Harvest .bash files.'
 cat ~/.bash_profile > ${PWD%/*}"/.bash_profile"
-cat ~/.bash_prompt > ${PWD%/*}"/.bash_prompt"
 cat ~/.bashrc > ${PWD%/*}"/.bashrc"
 cat ~/.dir_colors > ${PWD%/*}"/.dir_colors"
 cat ~/.profile > ${PWD%/*}"/.profile"

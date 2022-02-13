@@ -3,6 +3,7 @@ set -eo pipefail
 
 echo "Copy .config directory."
 cat ${PWD%/*}"/.config/mimeapps.list" > ~/.config/mimeapps.list
+cat ${PWD%/*}"/.config/starship.toml" > ~/.config/starship.toml
 cp -r ${PWD%/*}"/.config/alacritty" ~/.config/
 cp -r ${PWD%/*}"/.config/dunst" ~/.config/
 cp -r ${PWD%/*}"/.config/fd" ~/.config/

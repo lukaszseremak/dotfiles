@@ -27,6 +27,7 @@ yay -S --needed \
 	htop \
 	i3-gaps \
 	imagemagick \
+	jq \
 	libcurl-gnutls \
 	lxappearance-gtk3 \
 	manjaro-pipewire \
@@ -68,7 +69,7 @@ yay -S --needed \
 	wget \
 	yarn \
 	zip \
-	jq
+	starship
 
 echo "Install nautilus with gadgets."
 yay -S nautilus nautilus-open-any-terminal
