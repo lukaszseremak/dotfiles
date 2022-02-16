@@ -86,6 +86,10 @@ pyrightconfig.json
 .python-version
 .env
 
+# pipenv
+Pipfile
+Pipfile.lock
+
 # linux related files
 *cache*
 *Cache*
@@ -98,3 +102,5 @@ GIMP/
 spotify
 .git
 *moonchild*
+*.cargo
+*pulse*
