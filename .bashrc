@@ -4,11 +4,17 @@ export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 export GPG_TTY=$(tty)
 export BROWSER=/usr/bin/chromium
 export EDITOR=/usr/bin/nvim
+export BAT_THEME='Coldark-Dark'
 
 stty -ixon
 shopt -s autocd
-export HISTSIZE=5000
-export HISTFILESIZE=5000
+
+HISTCONTROL=ignoredups:erasedups
+shopt -s histappend
+PROMPT_COMMAND="history -n; history -w; history -c; history -r; $PROMPT_COMMAND"
+export HISTFILESIZE=
+export HISTSIZE=
+
 use_color=true
 set -o vi
 export LS_OPTIONS='-hN --color=auto --group-directories-first'
@@ -32,7 +38,6 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 
 eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
 
 echo -e "\e]2;Alacritty: $PWD\007"
 cd() {
