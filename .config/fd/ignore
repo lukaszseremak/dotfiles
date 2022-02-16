@@ -9,3 +9,5 @@ GIMP/
 spotify
 .git
 *moonchild*
+*.cargo
+*pulse*
