@@ -117,11 +117,11 @@ local mappings = {
 	l = {
 		name = "LSP",
 		d = {
-			"<cmd>Telescope diagnostics bufnr=0<cr>",
+			"<cmd>Trouble document_diagnostics<cr>",
 			"Document Diagnostics",
 		},
 		w = {
-			"<cmd>Telescope diagnostics<cr>",
+			"<cmd>Trouble workspace_diagnostics<cr>",
 			"Workspace Diagnostics",
 		},
 		D = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Docstring" },
