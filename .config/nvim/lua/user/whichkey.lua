@@ -143,6 +143,7 @@ local mappings = {
 			"<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
 			"Workspace Symbols",
 		},
+		t = { "<cmd>TodoTelescope<cr>", "Project TODOs" },
 	},
 	s = {
 		name = "Search",
