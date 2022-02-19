@@ -42,3 +42,13 @@
         "venv": "venv_name"
     }
     ```
+
+### 4. nvim with pyenv and pipenv:
+  - create venv with python version set by pyenv
+  ```bash
+  $ pipenv --python $(pyenv which python)
+  ```
+  - install required packages after creating new venv
+  ```bash
+  $ pipenv install --dev neovim pynvim
+  ```
