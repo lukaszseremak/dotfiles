@@ -81,6 +81,7 @@ return packer.startup(function(use)
 	})
 	use("danymat/neogen")
 	use("folke/trouble.nvim")
+	use("folke/todo-comments.nvim")
 
 	-- Colorschemes
 	use("lukaszseremak/spacegrayy")
