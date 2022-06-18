@@ -11,3 +11,5 @@ spotify
 *moonchild*
 *.cargo
 *pulse*
+*output/*
+*virtualenvs*
