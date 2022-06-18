@@ -11,8 +11,8 @@ yay -S --needed \
 	chromium \
 	cmake \
 	curl \
-	direnv \
 	dbus \
+	direnv \
 	docker-compose \
 	downgrade \
 	dunst \
@@ -20,9 +20,7 @@ yay -S --needed \
 	evince \
 	fd \
 	filezilla \
-	flake8 \
 	fzf \
-	ipython \
 	gimp \
 	git \
 	google-chrome-beta \
@@ -31,6 +29,7 @@ yay -S --needed \
 	i3-gaps \
 	imagemagick \
 	imagewriter \
+	ipython \
 	jq \
 	lazygit \
 	libcurl-gnutls \
@@ -51,12 +50,9 @@ yay -S --needed \
 	playerctl \
 	polybar \
 	prettier \
-	python-black \
 	python-pip \
-	python-pycodestyle \
-	python-pyodbc \
-	python-pylint \
 	python-pynvim \
+	python-pyodbc \
 	qt5ct \
 	ripgrep \
 	rofi \
@@ -65,6 +61,7 @@ yay -S --needed \
 	shfmt \
 	sof-firmware \
 	sshpass \
+	starship \
 	stylua \
 	teams \
 	the_silver_searcher \
@@ -75,8 +72,7 @@ yay -S --needed \
 	volumeicon \
 	wget \
 	yarn \
-	zip \
-	starship
+	zip
 
 echo "Install nautilus with gadgets."
 yay -S nautilus nautilus-open-any-terminal
@@ -115,8 +111,8 @@ else
 	echo 'AutoEnable=true' | sudo tee -a /etc/bluetooth/main.conf
 fi
 
-echo 'Install pipenv.'
-sudo -H pip install -U pipenv
+echo 'Upgrade pip version.'
+pip install --upgrade pip
 
 echo 'Install pyenv.'
 curl https://pyenv.run | bash
@@ -125,11 +121,23 @@ echo 'Install pipx.'
 pip install --user pipx
 pipx ensurepath
 
+echo 'Upgrade pipx version.'
+python -m pip install --user -U pipx
+
+echo 'Install python required packages using pipx.'
+pipx install --force black
+pipx install --force djhtml
+pipx install --force doq
+pipx install --force flake8
+pipx install --force pipenv
+pipx install --force pyright
+pipx install --force poetry
+pipx install --force pycodestyle
+pipx install --force pylint
+pipx install --force tox
+
 echo 'Install nvim required packages.'
-pip install --user djhtml
-pip install --user doq
 pip install --user pynvim
-pip install --user pyright
 pip install 'python-lsp-server[all]'
 sudo npm i -g bash-language-server
 sudo npm i -g neovim
