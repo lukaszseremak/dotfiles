@@ -31,6 +31,7 @@ local options = {
 	wrap = false,
 	scrolloff = 8,
 	sidescrolloff = 8,
+	laststatus = 3,
 }
 
 vim.opt.shortmess:append("c")
@@ -39,6 +40,7 @@ for k, v in pairs(options) do
 	vim.opt[k] = v
 end
 
+vim.cmd [[filetype plugin indent on]]
 vim.cmd("set whichwrap+=<,>,[,],h,l")
 vim.cmd([[set iskeyword+=-]])
-vim.g.python3_host_prog = '/usr/bin/python'
+vim.g.python3_host_prog = "/usr/bin/python"

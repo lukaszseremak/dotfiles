@@ -1,7 +1,6 @@
-require("close_buffers").setup({
-	filetype_ignore = {},
-	file_glob_ignore = {},
-	file_regex_ignore = {},
-	preserve_window_layout = { "this", "nameless" },
-	next_buffer_cmd = nil,
-})
+local status_ok, close_buffers = pcall(require, "close_buffers")
+if not status_ok then
+	return
+end
+
+close_buffers.setup({})
