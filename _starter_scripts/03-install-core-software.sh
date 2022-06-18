@@ -125,6 +125,7 @@ echo 'Upgrade pipx version.'
 python -m pip install --user -U pipx
 
 echo 'Install python required packages using pipx.'
+pipx install --force 'python-lsp-server[all]'
 pipx install --force black
 pipx install --force completions
 pipx install --force djhtml
@@ -139,7 +140,6 @@ pipx install --force tox
 
 echo 'Install nvim required packages.'
 pip install --user pynvim
-pip install 'python-lsp-server[all]'
 sudo npm i -g bash-language-server
 sudo npm i -g neovim
 
