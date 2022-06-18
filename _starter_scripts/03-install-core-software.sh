@@ -6,10 +6,12 @@ yay -S --needed \
 	alacritty \
 	arandr \
 	aritim-dark-gtk-git \
+	bind \
 	brave-browser-beta \
 	chromium \
 	cmake \
 	curl \
+	direnv \
 	dbus \
 	docker-compose \
 	downgrade \
@@ -20,6 +22,7 @@ yay -S --needed \
 	filezilla \
 	flake8 \
 	fzf \
+	ipython \
 	gimp \
 	git \
 	google-chrome-beta \
@@ -27,11 +30,14 @@ yay -S --needed \
 	htop \
 	i3-gaps \
 	imagemagick \
+	imagewriter \
 	jq \
+	lazygit \
 	libcurl-gnutls \
 	lxappearance-gtk3 \
 	manjaro-pipewire \
 	meld \
+	msodbcsql \
 	neofetch \
 	neovim \
 	neovim-symlinks \
@@ -48,6 +54,7 @@ yay -S --needed \
 	python-black \
 	python-pip \
 	python-pycodestyle \
+	python-pyodbc \
 	python-pylint \
 	python-pynvim \
 	qt5ct \
@@ -101,21 +108,22 @@ yay -S bluez bluez-utils
 modprobe btusb
 sudo systemctl start --now bluetooth.service
 sudo systemctl enable bluetooth.service
-if grep -Fxq "AutoEnable=True" /etc/bluetooth/main.conf; then
+if grep -Fxq "AutoEnable=true" /etc/bluetooth/main.conf; then
 	echo "bluetooth is auto enabled."
 else
 	echo "auto enabling bluetooth."
-	echo 'AutoEnable=True' | sudo tee -a /etc/bluetooth/main.conf
+	echo 'AutoEnable=true' | sudo tee -a /etc/bluetooth/main.conf
 fi
-
-echo 'Install and set virtualenv.'
-python -m pip install --user virtualenv
 
 echo 'Install pipenv.'
 sudo -H pip install -U pipenv
 
 echo 'Install pyenv.'
 curl https://pyenv.run | bash
+
+echo 'Install pipx.'
+pip install --user pipx
+pipx ensurepath
 
 echo 'Install nvim required packages.'
 pip install --user djhtml
