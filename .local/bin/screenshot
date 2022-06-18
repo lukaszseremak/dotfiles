@@ -1,5 +1,5 @@
 #! /bin/sh
-output='/home/seremak/Pictures/screenshots/%Y-%m-%d-%T-screenshot.png'
+output='/home/seremak/Pictures/screenshots/%Y_%m_%d_%H%M%S_screenshot.png'
 
 rofi_command="rofi -config ~/.config/rofi/screenshot_config.rasi -p "power""
 
@@ -18,13 +18,11 @@ case $chosen in
         dunstify 'Screenshot of selected area taken.' -u normal -i "camera"
         ;;
     $focused_window)
-        sleep 0.1
-        scrot "$output" --focused --border || exit
+        scrot --delay 1 "$output" --focused --border || exit
         dunstify 'Screenshot of focused window taken.' -u normal -i "camera"
         ;;
     $whole_screen)
-        sleep 0.1
-        scrot "$output" || exit
+        scrot --delay 1 "$output" || exit
         dunstify 'Screenshot of the whole screen taken.' -u normal -i "camera"
         ;;
 esac
