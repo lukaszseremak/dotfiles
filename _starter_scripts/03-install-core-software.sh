@@ -126,14 +126,15 @@ python -m pip install --user -U pipx
 
 echo 'Install python required packages using pipx.'
 pipx install --force black
+pipx install --force completions
 pipx install --force djhtml
 pipx install --force doq
 pipx install --force flake8
 pipx install --force pipenv
-pipx install --force pyright
 pipx install --force poetry
 pipx install --force pycodestyle
 pipx install --force pylint
+pipx install --force pyright
 pipx install --force tox
 
 echo 'Install nvim required packages.'
