@@ -65,13 +65,11 @@ local opts = {
 
 local mappings = {
 	["b"] = { "<cmd>Telescope buffers<cr>", "Buffers" },
-	["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
+	["e"] = { "<cmd>NvimTreeToggle<cr>", "File Fanager" },
 	["w"] = { "<cmd>w!<CR>", "Save" },
 	["q"] = { "<cmd>q!<CR>", "Quit" },
-	["c"] = { "<cmd>BDelete this<CR>", "Close Buffer" },
 	["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
-	["m"] = { "<cmd>Telescope neoclip<cr>", "Clipmenu" },
-	["f"] = { "<cmd>lua require('telescope.builtin').find_files()<cr>", "Find File" },
+	["f"] = { "<cmd>Telescope find_files<cr>", "Find File" },
 	["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
 
 	a = {
@@ -116,33 +114,19 @@ local mappings = {
 
 	l = {
 		name = "LSP",
-		d = {
-			"<cmd>Trouble document_diagnostics<cr>",
-			"Document Diagnostics",
-		},
-		w = {
-			"<cmd>Trouble workspace_diagnostics<cr>",
-			"Workspace Diagnostics",
-		},
+		e = { "<cmd>Telescope env<cr>", "Environment Variables" },
+		d = { "<cmd>Telescope diagnostics bufnr=0 theme=ivy<cr>", "Document Diagnostics" },
+		w = { "<cmd>Telescope diagnostics theme=ivy<cr>", "Workspace Diagnostics" },
 		D = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Docstring" },
 		f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format" },
 		i = { "<cmd>LspInfo<cr>", "Info" },
 		I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
-		j = {
-			"<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",
-			"Next Diagnostic",
-		},
-		k = {
-			"<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>",
-			"Prev Diagnostic",
-		},
-		q = { "<cmd>lua vim.diagnostic.setloclist()<cr>", "Quickfix" },
+		n = { "<cmd>Telescope notify theme=ivy<cr>", "Notifications" },
+		j = { "<cmd>lua vim.diagnostic.goto_next()<CR>", "Next Diagnostic" },
+		k = { "<cmd>lua vim.diagnostic.goto_prev()<cr>", "Prev Diagnostic" },
 		r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
 		s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
-		S = {
-			"<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
-			"Workspace Symbols",
-		},
+		S = { "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", "Workspace Symbols" },
 		t = { "<cmd>TodoTelescope<cr>", "Project TODOs" },
 	},
 	s = {
@@ -151,14 +135,12 @@ local mappings = {
 		h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
 		M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
 		r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
-		R = { "<cmd>Telescope registers<cr>", "Registers" },
 		k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
 		C = { "<cmd>Telescope commands<cr>", "Commands" },
 	},
 
 	t = {
 		name = "Terminal",
-		n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
 		u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
 		t = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
 		p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
@@ -169,9 +151,11 @@ local mappings = {
 
 	G = {
 		name = "Goto Preview",
-		d = { "<cmd>lua require('goto-preview').goto_preview_definition()<CR>", "Preview Definition" },
-		c = { "<cmd>lua require('goto-preview').close_all_win()<CR>", "Close all windows" },
-		r = { "<cmd>lua require('goto-preview').goto_preview_references()<CR>", "Preview References" },
+		d = {
+			"<cmd>lua require('telescope.builtin').lsp_definitions({ jump_type = 'never'})<CR>",
+			"Preview Definition",
+		},
+		r = { "<cmd>lua require('telescope.builtin').lsp_references()<CR>", "Preview References" },
 	},
 }
 

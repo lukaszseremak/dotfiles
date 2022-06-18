@@ -3,22 +3,35 @@ if not status_ok then
 	return
 end
 
+local status_ok, nvim_gps = pcall(require, "nvim-gps")
+if not status_ok then
+	return
+end
+
 lualine.setup({
 	options = {
 		icons_enabled = true,
-		padding = 1,
-		theme = "ayu_dark",
-		component_separators = { "", "" },
-		section_separators = { "", "" },
+		theme = "onenord",
+		component_separators = { left = "", right = "" },
+		section_separators = { left = "", right = "" },
 		disabled_filetypes = {},
+		globalstatus = true,
+		always_divide_middle = true,
 	},
 	sections = {
 		lualine_a = { "mode" },
 		lualine_b = {
 			{ "branch", icon = "" },
-			{ "diff", color_added = "#a7c080", color_modified = "#ffdf1b", color_removed = "#ff6666" },
+			{ "diff", color_added = "#91B362", color_modified = "#FAE994", color_removed = "#EA6C73" },
 		},
-		lualine_c = { "filename" },
+		lualine_c = {
+			{ "filename" },
+			{
+				nvim_gps.get_location,
+				cond = nvim_gps.is_available,
+				color = { fg = "#97bc7c" },
+			},
+		},
 		lualine_x = {
 			{
 				"diagnostics",
@@ -26,6 +39,7 @@ lualine.setup({
 				symbols = { error = " ", warn = " ", info = " ", hint = " " },
 			},
 			"encoding",
+			"fileformat",
 			"filetype",
 		},
 		lualine_y = { "progress" },

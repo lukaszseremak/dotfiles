@@ -1,30 +1,28 @@
-require "user.options"
-require "user.keymaps"
-require "user.plugins"
-require "user.colorscheme"
-require "user.cmp"
-require "user.lsp"
-require "user.telescope"
-require "user.treesitter"
-require "user.autopairs"
-require "user.comment"
-require "user.gitsigns"
-require "user.nvim-tree"
-require "user.bufferline"
-require "user.close-buffers"
-require "user.lualine"
-require "user.toggleterm"
-require "user.whichkey"
-require "user.null-ls"
-require "user.project"
-require "user.impatient"
-require "user.indentline"
-require "user.startup"
-require "user.wilder"
-require "user.markdown-preview"
-require "user.colorizer"
-require "user.goto-preview"
-require "user.neoclip"
-require "user.neogen"
-require "user.trouble"
-require "user.todo-comments"
+require("user.options")
+require("user.keymaps")
+require("user.plugins")
+require("user.autopairs")
+require("user.close-buffers")
+require("user.cmp")
+require("user.colorizer")
+require("user.colorscheme")
+require("user.comment")
+require("user.gitsigns")
+require("user.impatient")
+require("user.indentline")
+require("user.lightspeed")
+require("user.lsp")
+require("user.lualine")
+require("user.markdown-preview")
+require("user.neogen")
+require("user.null-ls")
+require("user.nvim-notify")
+require("user.nvim-gps")
+require("user.nvim-tree")
+require("user.startup")
+require("user.telescope")
+require("user.todo-comments")
+require("user.toggleterm")
+require("user.treesitter")
+require("user.whichkey")
+require("user.wilder")
