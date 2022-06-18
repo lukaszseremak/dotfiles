@@ -34,7 +34,7 @@ bindsym $mod+d exec --no-startup-id rofi -no-lazy-grab -show drun -modi drun -co
 
 ################################################################################################
 
-exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
+exec_always --no-startup-id picom --config ~/.config/picom/picom.conf --experimental-backends
 exec --no-startup-id setxkbmap pl
 bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh

@@ -9,7 +9,7 @@ configuration {
 @import "colors.rasi"
 
 window {
-  width: 12%;
+  width: 11%;
   height: 17%;
   border-radius: 10px;
   location: center;
