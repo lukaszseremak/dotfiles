@@ -10,7 +10,7 @@ configuration {
 
 window {
   width: 20%;
-  height: 3.5%;
+  height: 3.7%;
   border-color: @foreground;
   background-color: @foreground;
   border-radius: 10px;

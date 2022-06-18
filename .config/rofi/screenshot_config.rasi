@@ -4,8 +4,8 @@
 
 window {
   transparency: "real";
-  width: 3.6%;
-  height: 18.6%;
+  width: 95px;
+  height: 270px;
   location: east;
   x-offset: -15px;
   border-radius: 15px;
