@@ -64,6 +64,7 @@ yay -S --needed \
 	starship \
 	stylua \
 	teams \
+	terraform \
 	the_silver_searcher \
 	unixodbc \
 	unrar \
@@ -126,21 +127,25 @@ python -m pip install --user -U pipx
 
 echo 'Install python required packages using pipx.'
 pipx install --force 'python-lsp-server[all]'
+pipx install --force autoflake
 pipx install --force black
 pipx install --force completions
 pipx install --force djhtml
 pipx install --force doq
 pipx install --force flake8
+pipx install --force isort
 pipx install --force pipenv
 pipx install --force poetry
 pipx install --force pycodestyle
 pipx install --force pylint
 pipx install --force pyright
 pipx install --force tox
+pipx install --force yapf
 
 echo 'Install nvim required packages.'
 pip install --user pynvim
-sudo npm i -g bash-language-server
-sudo npm i -g neovim
+npm config set prefix '~/.local/'
+npm i -g bash-language-server
+npm i -g neovim
 
 echo "##################    Core software installed.    ##################"

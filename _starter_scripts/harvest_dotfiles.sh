@@ -35,6 +35,12 @@ cat ~/.gitignore > ${PWD%/*}"/.gitignore_global"
 echo 'Harvest gtkrc-2.0 file.'
 cat ~/.gtkrc-2.0 > ${PWD%/*}"/gtkrc-2.0"
 
+echo 'Harvest npmrc file.'
+cat ~/.npmrc > ${PWD%/*}"/.npmrc"
+
+echo 'Harvest .direnvrc file.'
+cat ~/.direnvrc > ${PWD%/*}"/.direnvrc"
+
 echo "Harvest fonts."
 cp -r /usr/share/fonts/DaddyTimeMono ${PWD%/*}"/.fonts/"
 cp -r /usr/share/fonts/Feather ${PWD%/*}"/.fonts/"
