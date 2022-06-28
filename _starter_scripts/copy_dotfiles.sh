@@ -31,7 +31,13 @@ cat ${PWD%/*}"/.gitconfig" > ~/.gitconfig
 cat ${PWD%/*}"/.gitignore_global" > ~/.gitignore
 
 echo 'Copy gtkrc-2.0 file.'
-cat > ${PWD%/*}"/gtkrc-2.0" ~/.gtkrc-2.0
+cat ${PWD%/*}"/gtkrc-2.0" > ~/.gtkrc-2.0
+
+echo 'Copy .npmrc file.'
+cat ${PWD%/*}"/.npmrc" > ~/.npmrc
+
+echo 'Copy .direnvrc file.'
+cat ${PWD%/*}"/.direnvrc" > ~/.direnvrc
 
 echo "Copy fonts."
 sudo bash -c 'cp -r ${PWD%/*}"/.fonts/"* "/usr/share/fonts/"'
