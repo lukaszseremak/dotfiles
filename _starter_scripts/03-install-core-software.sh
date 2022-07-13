@@ -13,7 +13,6 @@ yay -S --needed \
 	curl \
 	dbus \
 	direnv \
-	docker-compose \
 	downgrade \
 	dunst \
 	dunstify \
@@ -130,6 +129,7 @@ pipx install --force 'python-lsp-server[all]'
 pipx install --force autoflake
 pipx install --force black
 pipx install --force completions
+pipx install --force docker-compose
 pipx install --force djhtml
 pipx install --force doq
 pipx install --force flake8
