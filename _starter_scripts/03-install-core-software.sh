@@ -35,7 +35,7 @@ yay -S --needed \
 	lxappearance-gtk3 \
 	manjaro-pipewire \
 	meld \
-	msodbcsql \
+	msodbcsql17 \
 	neofetch \
 	neovim \
 	neovim-symlinks \
@@ -48,6 +48,7 @@ yay -S --needed \
 	picom-git \
 	playerctl \
 	polybar \
+	postgresql \
 	prettier \
 	python-pip \
 	python-pynvim \
