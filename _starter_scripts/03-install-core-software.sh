@@ -13,6 +13,7 @@ yay -S --needed \
 	curl \
 	dbus \
 	direnv \
+	docker-ls \
 	downgrade \
 	dunst \
 	dunstify \
@@ -56,6 +57,7 @@ yay -S --needed \
 	qt5ct \
 	ripgrep \
 	rofi \
+	rust \
 	screenfetch \
 	scrot \
 	shfmt \
