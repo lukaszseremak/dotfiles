@@ -76,7 +76,7 @@ venv_*
 .vscode/
 
 #temp project files
-app.py
+local_run.py
 
 # rain files
 kube-config

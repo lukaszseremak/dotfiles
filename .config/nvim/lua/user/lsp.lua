@@ -1,5 +1,6 @@
 local opts = { noremap = true, silent = true }
 local on_attach = function(client, bufnr)
+	client.resolved_capabilities.document_formatting = false
 	vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 end
 
@@ -8,7 +9,7 @@ if not status_ok then
 	return
 end
 
-local servers = { "bashls", "pyright" }
+local servers = { "bashls", "dockerls", "grammarly", "jsonls", "marksman", "pyright", "sumneko_lua", "taplo", "yamlls" }
 
 nvim_lsp_installer.setup({
 	ensure_installed = servers,
