@@ -127,11 +127,12 @@ python -m pip install --user -U pipx
 
 echo 'Install python required packages using pipx.'
 pipx install --force 'python-lsp-server[all]'
+pipx install --force Django
 pipx install --force autoflake
 pipx install --force black
 pipx install --force completions
-pipx install --force docker-compose
 pipx install --force djhtml
+pipx install --force docker-compose
 pipx install --force doq
 pipx install --force flake8
 pipx install --force isort
