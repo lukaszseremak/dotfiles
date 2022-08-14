@@ -74,6 +74,7 @@ return packer.startup(function(use)
 	use("mechatroner/rainbow_csv")
 	use("ggandor/lightspeed.nvim")
 	use("rcarriga/nvim-notify")
+	use("https://gitlab.com/yorickpeterse/nvim-window.git")
 
 	-- Colorschemes
 	use("rmehri01/onenord.nvim")

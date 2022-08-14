@@ -67,6 +67,7 @@ local mappings = {
 	["b"] = { "<cmd>Telescope buffers<cr>", "Buffers" },
 	["e"] = { "<cmd>NvimTreeToggle<cr>", "File Fanager" },
 	["w"] = { "<cmd>w!<CR>", "Save" },
+	["W"] = { "<cmd>lua require('nvim-window').pick()<CR>", "Pick Window" },
 	["q"] = { "<cmd>q!<CR>", "Quit" },
 	["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
 	["f"] = { "<cmd>Telescope find_files<cr>", "Find File" },
