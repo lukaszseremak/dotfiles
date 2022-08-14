@@ -9,7 +9,18 @@ if not status_ok then
 	return
 end
 
-local servers = { "bashls", "dockerls", "grammarly", "jsonls", "marksman", "pyright", "sumneko_lua", "taplo", "yamlls" }
+local servers = {
+	"bashls",
+	"cssls",
+	"dockerls",
+	"grammarly",
+	"html",
+	"jsonls",
+	"pyright",
+	"sumneko_lua",
+	"taplo",
+	"yamlls",
+}
 
 nvim_lsp_installer.setup({
 	ensure_installed = servers,
