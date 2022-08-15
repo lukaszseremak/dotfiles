@@ -138,6 +138,7 @@ pipx install --force djhtml
 pipx install --force docker-compose
 pipx install --force doq
 pipx install --force flake8
+pipx install --force httpie
 pipx install --force isort
 pipx install --force pipenv
 pipx install --force poetry
