@@ -12,6 +12,7 @@ yay -S --needed \
 	cmake \
 	curl \
 	dbus \
+	diff-so-fancy \
 	direnv \
 	docker-ls \
 	downgrade \
