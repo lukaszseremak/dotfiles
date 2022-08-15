@@ -121,7 +121,7 @@ local mappings = {
 		D = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Docstring" },
 		f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format" },
 		i = { "<cmd>LspInfo<cr>", "Info" },
-		I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
+		I = { "<cmd>Mason<cr>", "Installer Info" },
 		n = { "<cmd>Telescope notify theme=ivy<cr>", "Notifications" },
 		j = { "<cmd>lua vim.diagnostic.goto_next()<CR>", "Next Diagnostic" },
 		k = { "<cmd>lua vim.diagnostic.goto_prev()<cr>", "Prev Diagnostic" },

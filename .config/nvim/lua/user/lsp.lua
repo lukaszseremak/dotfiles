@@ -1,11 +1,15 @@
-local opts = { noremap = true, silent = true }
 local on_attach = function(client, bufnr)
 	client.resolved_capabilities.document_formatting = false
 	vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 end
 
-local status_ok, nvim_lsp_installer = pcall(require, "nvim-lsp-installer")
-if not status_ok then
+local mason_status, mason = pcall(require, "mason")
+if not mason_status then
+	return
+end
+
+local mason_lspconfig_status, mason_lspconfig = pcall(require, "mason-lspconfig")
+if not mason_lspconfig_status then
 	return
 end
 
@@ -22,7 +26,9 @@ local servers = {
 	"yamlls",
 }
 
-nvim_lsp_installer.setup({
+mason.setup({})
+
+mason_lspconfig.setup({
 	ensure_installed = servers,
 	automatic_installation = true,
 })
