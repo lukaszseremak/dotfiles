@@ -1,5 +1,5 @@
-local status_ok, nvim_gps = pcall(require, "nvim-gps")
-if not status_ok then
+local nvim_gps = load_plugin("nvim-gps")
+if not nvim_gps then
 	return
 end
 

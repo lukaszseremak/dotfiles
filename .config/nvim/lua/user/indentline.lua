@@ -1,5 +1,5 @@
-local status_ok, indent_blankline = pcall(require, "indent_blankline")
-if not status_ok then
+local indent_blankline = load_plugin("indent_blankline")
+if not indent_blankline then
 	return
 end
 

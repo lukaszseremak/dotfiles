@@ -1,5 +1,5 @@
-local status_ok, startup = pcall(require, "startup")
-if not status_ok then
+local startup = load_plugin("startup")
+if not startup then
 	return
 end
 

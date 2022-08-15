@@ -1,5 +1,5 @@
-local status_ok, impatient = pcall(require, "impatient")
-if not status_ok then
+local impatient = load_plugin("impatient")
+if not impatient then
 	return
 end
 

@@ -1,5 +1,5 @@
-local status_ok, colorizer = pcall(require, "colorizer")
-if not status_ok then
+local colorizer = load_plugin("colorizer")
+if not colorizer then
 	return
 end
 

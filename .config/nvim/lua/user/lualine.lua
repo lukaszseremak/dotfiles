@@ -1,10 +1,6 @@
-local status_ok, lualine = pcall(require, "lualine")
-if not status_ok then
-	return
-end
-
-local status_ok, nvim_gps = pcall(require, "nvim-gps")
-if not status_ok then
+local lualine = load_plugin("lualine")
+local nvim_gps = load_plugin("nvim-gps")
+if not (lualine and nvim_gps) then
 	return
 end
 

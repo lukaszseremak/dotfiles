@@ -1,5 +1,5 @@
-local status_ok, onenord = pcall(require, "onenord")
-if not status_ok then
+local onenord = load_plugin("onenord")
+if not onenord then
 	return
 end
 

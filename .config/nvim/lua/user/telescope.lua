@@ -1,9 +1,7 @@
-local status_ok, telescope = pcall(require, "telescope")
-if not status_ok then
+local telescope = load_plugin("telescope")
+if not telescope then
 	return
 end
-
-local actions = require("telescope.actions")
 
 telescope.setup({
 	defaults = {
@@ -26,6 +24,6 @@ telescope.setup({
 	},
 })
 
-require("telescope").load_extension("fzf")
-require("telescope").load_extension("notify")
-require("telescope").load_extension("env")
+telescope.load_extension("fzf")
+telescope.load_extension("notify")
+telescope.load_extension("env")

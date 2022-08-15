@@ -1,5 +1,5 @@
-local status_ok, comment = pcall(require, "Comment")
-if not status_ok then
+local comment = load_plugin("Comment")
+if not comment then
 	return
 end
 

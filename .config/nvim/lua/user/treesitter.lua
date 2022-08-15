@@ -1,9 +1,10 @@
-local status_ok, configs = pcall(require, "nvim-treesitter.configs")
-if not status_ok then
+local nvim_treesitter_configs = load_plugin("nvim-treesitter.configs")
+local treesitter_context = load_plugin("treesitter-context")
+if not (nvim_treesitter_configs and treesitter_context) then
 	return
 end
 
-configs.setup({
+nvim_treesitter_configs.setup({
 	ensure_installed = "all",
 	sync_install = false,
 	ignore_install = { "phpdoc", "swift" },
@@ -20,11 +21,6 @@ configs.setup({
 		enable_autocmd = false,
 	},
 })
-
-local status_ok, treesitter_context = pcall(require, "treesitter-context")
-if not status_ok then
-	return
-end
 
 treesitter_context.setup({
 	enable = true,

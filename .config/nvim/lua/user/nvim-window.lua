@@ -1,10 +1,9 @@
-local nvim_window_status_ok, nvim_window = pcall(require, "nvim-window")
-if not nvim_window_status_ok then
+local nvim_window = load_plugin("nvim-window")
+if not nvim_window then
 	return
 end
 
 nvim_window.setup({
-	normal_hl = "Normal",
-	hint_hl = "Bold",
-	border = "single",
+	normal_hl = "PmenuSel",
+	border = "none",
 })

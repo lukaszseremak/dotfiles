@@ -1,7 +1,9 @@
-local status_ok, nvim_notify = pcall(require, "notify")
-if not status_ok then
+local notify = load_plugin("notify")
+if not notify then
 	return
 end
 
-vim.notify = nvim_notify
-nvim_notify.setup({})
+vim.notify = notify
+notify.setup({
+	background_colour = "#000000",
+})

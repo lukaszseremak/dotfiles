@@ -1,5 +1,5 @@
-local status_ok, neogen = pcall(require, "neogen")
-if not status_ok then
+local neogen = load_plugin("neogen")
+if not neogen then
 	return
 end
 

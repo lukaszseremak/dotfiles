@@ -1,5 +1,5 @@
-local textcase_status_ok, textcase = pcall(require, "textcase")
-if not textcase_status_ok then
+local textcase = load_plugin("textcase")
+if not textcase then
 	return
 end
 

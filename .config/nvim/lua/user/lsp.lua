@@ -1,15 +1,7 @@
-local on_attach = function(client, bufnr)
-	client.resolved_capabilities.document_formatting = false
-	vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
-end
-
-local mason_status, mason = pcall(require, "mason")
-if not mason_status then
-	return
-end
-
-local mason_lspconfig_status, mason_lspconfig = pcall(require, "mason-lspconfig")
-if not mason_lspconfig_status then
+local mason = load_plugin("mason")
+local mason_lspconfig = load_plugin("mason-lspconfig")
+local lspconfig = load_plugin("lspconfig")
+if not (mason and mason_lspconfig and lspconfig) then
 	return
 end
 
@@ -33,8 +25,13 @@ mason_lspconfig.setup({
 	automatic_installation = true,
 })
 
+local on_attach = function(client, bufnr)
+	client.resolved_capabilities.document_formatting = false
+	vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
+end
+
 for _, lsp in pairs(servers) do
-	require("lspconfig")[lsp].setup({
+	lspconfig[lsp].setup({
 		on_attach = on_attach,
 		flags = {
 			debounce_text_changes = 150,

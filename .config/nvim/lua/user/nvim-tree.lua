@@ -1,10 +1,6 @@
-local status_ok, nvim_tree = pcall(require, "nvim-tree")
-if not status_ok then
-	return
-end
-
-local config_status_ok, nvim_tree_config = pcall(require, "nvim-tree.config")
-if not config_status_ok then
+local nvim_tree = load_plugin("nvim-tree")
+local nvim_tree_config = load_plugin("nvim-tree.config")
+if not (nvim_tree and nvim_tree_config) then
 	return
 end
 

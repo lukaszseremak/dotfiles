@@ -1,5 +1,5 @@
-local status_ok, close_buffers = pcall(require, "close_buffers")
-if not status_ok then
+local close_buffers = load_plugin("close_buffers")
+if not close_buffers then
 	return
 end
 

@@ -1,5 +1,5 @@
-local status_ok, lightspeed = pcall(require, "lightspeed")
-if not status_ok then
+local lightspeed = load_plugin("lightspeed")
+if not lightspeed then
 	return
 end
 
