@@ -75,6 +75,7 @@ return packer.startup(function(use)
 	use("ggandor/lightspeed.nvim")
 	use("rcarriga/nvim-notify")
 	use("https://gitlab.com/yorickpeterse/nvim-window.git")
+	use("johmsalas/text-case.nvim")
 
 	-- Colorschemes
 	use("rmehri01/onenord.nvim")

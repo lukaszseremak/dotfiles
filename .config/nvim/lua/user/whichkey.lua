@@ -95,7 +95,7 @@ local mappings = {
 		g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
 		j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
 		k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
-		b = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
+		l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
 		p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
 		r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
 		R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
@@ -148,6 +148,21 @@ local mappings = {
 		f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
 		h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
 		v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
+	},
+
+	T = {
+		name = "Text Case",
+		u = { "<CMD>lua require('textcase').current_word('to_upper_case')<CR>", "To Upper Case" },
+		l = { "<CMD>lua require('textcase').current_word('to_lower_case')<CR>", "To Lower Case" },
+		s = { "<CMD>lua require('textcase').current_word('to_snake_case')<CR>", "To Snake Case" },
+		d = { "<CMD>lua require('textcase').current_word('to_dash_case')<CR>", "To Dash Case" },
+		n = { "<CMD>lua require('textcase').current_word('to_constant_case')<CR>", "To Constant Case" },
+		D = { "<CMD>lua require('textcase').current_word('to_dot_case')<CR>", "To Dot Case" },
+		p = { "<CMD>lua require('textcase').current_word('to_phrase_case')<CR>", "To Phrase Case" },
+		c = { "<CMD>lua require('textcase').current_word('to_camel_case')<CR>", "To Camel Case" },
+		P = { "<CMD>lua require('textcase').current_word('to_pascal_case')<CR>", "To Pascal Case" },
+		t = { "<CMD>lua require('textcase').current_word('to_title_case')<CR>", "To Title Case" },
+		f = { "<CMD>lua require('textcase').current_word('to_path_case')<CR>", "To Path Case" },
 	},
 
 	G = {
