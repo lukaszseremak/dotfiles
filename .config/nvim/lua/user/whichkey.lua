@@ -1,6 +1,6 @@
 local which_key = load_plugin("which-key")
 if not which_key then
-  return
+	return
 end
 
 local setup = {
