@@ -125,7 +125,7 @@ local mappings = {
 		n = { "<cmd>Telescope notify theme=ivy<cr>", "Notifications" },
 		j = { "<cmd>lua vim.diagnostic.goto_next()<CR>", "Next Diagnostic" },
 		k = { "<cmd>lua vim.diagnostic.goto_prev()<cr>", "Prev Diagnostic" },
-		r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
+		r = { "<cmd>Lspsaga rename<cr>", "Rename" },
 		s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
 		S = { "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", "Workspace Symbols" },
 		t = { "<cmd>TodoTelescope<cr>", "Project TODOs" },

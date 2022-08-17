@@ -78,6 +78,10 @@ return packer.startup(function(use)
 	use("johmsalas/text-case.nvim")
 	use("petertriho/nvim-scrollbar")
 	use("kylechui/nvim-surround")
+	use({
+		"glepnir/lspsaga.nvim",
+		branch = "main",
+	})
 
 	-- Colorschemes
 	use("rmehri01/onenord.nvim")
