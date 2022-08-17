@@ -77,6 +77,7 @@ return packer.startup(function(use)
 	use("https://gitlab.com/yorickpeterse/nvim-window.git")
 	use("johmsalas/text-case.nvim")
 	use("petertriho/nvim-scrollbar")
+	use("kylechui/nvim-surround")
 
 	-- Colorschemes
 	use("rmehri01/onenord.nvim")
