@@ -74,7 +74,9 @@ yay -S --needed \
 	unzip \
 	vlc \
 	volumeicon \
+	xdotool \
 	wget \
+	yad \
 	yarn \
 	zip
 
