@@ -7,7 +7,7 @@ telescope.setup({
 	defaults = {
 		prompt_prefix = " ",
 		selection_caret = " ",
-		file_ignore_patterns = { ".git/", "static/" },
+		file_ignore_patterns = { ".git/", ".cache/", ".kodi/"},
 	},
 	pickers = {
 		find_files = {

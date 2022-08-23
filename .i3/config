@@ -245,6 +245,6 @@ set_from_resource $term_color15    color15
 
 # Set inner/outer gaps
 for_window [class="^.*"] border pixel 5
-gaps inner 32
-gaps outer 34
+gaps inner 38
+gaps outer 40
 smart_borders on
