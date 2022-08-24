@@ -9,6 +9,7 @@ cp -r ${PWD%/*}"/.config/dunst" ~/.config/
 cp -r ${PWD%/*}"/.config/fd" ~/.config/
 cp -r ${PWD%/*}"/.config/gtk-3.0" ~/.config/
 cp -r ${PWD%/*}"/.config/lf" ~/.config/
+cp -r ${PWD%/*}"/.config/nitrogen" ~/.config/
 cp -r ${PWD%/*}"/.config/nvim" ~/.config/
 cp -r ${PWD%/*}"/.config/picom" ~/.config/
 cp -r ${PWD%/*}"/.config/polybar" ~/.config/
@@ -54,3 +55,6 @@ cp -r ${PWD%/*}"/.local/bin/"* ~/.local/bin/
 
 echo "Copy custom themes directory."
 cp -r ${PWD%/*}"/.themes/"* ~/.themes/
+
+echo "Copy backgrounds."
+sudo bash -c 'cp -r ${PWD%/*}"/.backgrounds/"* "/usr/share/backgrounds/"'
