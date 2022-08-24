@@ -1,53 +1,46 @@
-window:
-  padding:
-    x: 5
-    y: 5
-  class:
-    instance: Alacritty
-    general: Alacritty
-  dynamic_title: true
-  opacity: 1
+## Import files (Colors, Fonts, Etc)
+import:
+  - ~/.config/alacritty/colors.yml
+  - ~/.config/alacritty/fonts.yml
 
-scrolling:
+# Set environment variables
+env:
+  TERM: alacritty
+  WINIT_X11_SCALE_FACTOR: '1.0'
+
+## Terminal window settings
+window:
+  dimensions:
+    columns: 82
+    lines: 24
+
+  padding:
+    x: 4
+    y: 4
+
+  decorations: full
+  startup_mode: Windowed
+  dynamic_title: true
+
+  ## scrolling
   history: 10000
   multiplier: 3
 
+  ## Background opacity
+  opacity: 1.0
+
+## Cursor
+cursor:
+  style:
+    shape: Block
+    blinking: On
+
+  unfocused_hollow: false
+
+## Live config reload
 live_config_reload: true
 
 key_bindings:
   - { key: Return, mods: Super|Shift, action: SpawnNewInstance }
 
 draw_bold_text_with_bright_colors: true
-
-colors:
-  # Default colors
-  primary:
-    background: '#0B0B12'
-    foreground: '#D9E0EE'
-
-  # Normal colors
-  normal:
-    black:   '#01060E'
-    red:     '#EA6C73'
-    green:   '#91B362'
-    yellow:  '#F9AF4F'
-    blue:    '#53BDFA'
-    magenta: '#FAE994'
-    cyan:    '#90E1C6'
-    white:   '#D9E0EE'
-
-  # Bright colors
-  bright:
-    black:   '#01060E'
-    red:     '#EA6C73'
-    green:   '#91B362'
-    yellow:  '#F9AF4F'
-    blue:    '#53BDFA'
-    magenta: '#FAE994'
-    cyan:    '#90E1C6'
-    white:   '#D9E0EE'
-
-font:
-  normal:
-    family: DaddyTimeMono Nerd Font
-  size: 7.5

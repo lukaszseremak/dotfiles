@@ -1,0 +1,23 @@
+font:
+  # Normal (roman) font face
+  normal:
+    family: "DaddyTimeMono Nerd Font"
+    #style: Regular
+
+  # Bold font face
+  bold:
+    family: "DaddyTimeMono Nerd Font"
+    #style: Bold
+
+  # Italic font face
+  italic:
+    family: "DaddyTimeMono Nerd Font"
+    #style: Italic
+
+  # Bold italic font face
+  bold_italic:
+    family: "DaddyTimeMono Nerd Font"
+    #style: Bold Italic
+
+  # Point size
+  size: 13
