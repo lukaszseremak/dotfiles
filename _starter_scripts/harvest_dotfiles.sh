@@ -63,4 +63,4 @@ cp ~/.local/bin/lfrun ${PWD%/*}"/.local/bin/lfrun"
 cp ~/.local/bin/screenshot ${PWD%/*}"/.local/bin/screenshot"
 
 echo "Harvest backgrounds."
-cp -r /usr/share/backgrounds/ ${PWD%/*}"/.backgrounds/"
+cp /usr/share/backgrounds/* ${PWD%/*}"/.backgrounds/"
