@@ -29,6 +29,7 @@ yay -S --needed \
 	htop \
 	i3-gaps \
 	imagemagick \
+	go-md2man \
 	imagewriter \
 	ipython \
 	jq \
@@ -155,5 +156,8 @@ pip install --user pynvim
 npm config set prefix '~/.local/'
 npm i -g bash-language-server
 npm i -g neovim
+
+echo 'Add user to video group.'
+sudo usermod -aG video $USER
 
 echo "##################    Core software installed.    ##################"

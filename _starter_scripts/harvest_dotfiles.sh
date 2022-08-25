@@ -58,6 +58,8 @@ cp -r ~/.scripts ${PWD%/*}"/"
 
 echo "Harvest custom scritps from .local/bin directory."
 cp ~/.local/bin/blurlock ${PWD%/*}"/.local/bin/blurlock"
+cp ~/.local/bin/brillo ${PWD%/*}"/.local/bin/brillo"
+cp ~/.local/bin/changebrightness ${PWD%/*}"/.local/bin/changebrightness"
 cp ~/.local/bin/changevolume ${PWD%/*}"/.local/bin/changevolume"
 cp ~/.local/bin/lfrun ${PWD%/*}"/.local/bin/lfrun"
 cp ~/.local/bin/screenshot ${PWD%/*}"/.local/bin/screenshot"
