@@ -28,6 +28,9 @@ bindsym XF86AudioLowerVolume exec changevolume down
 bindsym XF86AudioMute exec changevolume mute
 bindsym XF86AudioRaiseVolume exec changevolume up
 
+bindsym XF86MonBrightnessDown exec changebrightness down
+bindsym XF86MonBrightnessUp exec changebrightness up
+
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
@@ -60,6 +63,7 @@ bindsym $mod+Shift+r restart
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id clipit
+exec --no-startup-id xfce4-power-manager
 exec --no-startup-id nitrogen --restore --set-scaled; sleep 1; picom -b
 exec --no-startup-id nm-applet
 exec --no-startup-id setxkbmap pl
