@@ -7,7 +7,7 @@ yay -S --needed \
 	arandr \
 	aritim-dark-gtk-git \
 	bind \
-	brave-browser-beta \
+	brave-beta-bin \
 	chromium \
 	cmake \
 	curl \
@@ -17,7 +17,6 @@ yay -S --needed \
 	docker-ls \
 	downgrade \
 	dunst \
-	dunstify \
 	evince \
 	fd \
 	filezilla \
@@ -36,7 +35,6 @@ yay -S --needed \
 	lazygit \
 	libcurl-gnutls \
 	lxappearance-gtk3 \
-	manjaro-pipewire \
 	meld \
 	msodbcsql17 \
 	neofetch \
@@ -106,18 +104,6 @@ yay -S --needed \
 	transmission-gtk \
 	wkhtmltopdf
 
-echo "Install and config bluetooth."
-yay -S bluez bluez-utils
-modprobe btusb
-sudo systemctl start --now bluetooth.service
-sudo systemctl enable bluetooth.service
-if grep -Fxq "AutoEnable=true" /etc/bluetooth/main.conf; then
-	echo "bluetooth is auto enabled."
-else
-	echo "auto enabling bluetooth."
-	echo 'AutoEnable=true' | sudo tee -a /etc/bluetooth/main.conf
-fi
-
 echo 'Upgrade pip version.'
 pip install --upgrade pip
 
@@ -125,31 +111,31 @@ echo 'Install pyenv.'
 curl https://pyenv.run | bash
 
 echo 'Install pipx.'
-pip install --user pipx
-pipx ensurepath
+python -m pip install --user pipx
+python -m pipx ensurepath
 
 echo 'Upgrade pipx version.'
 python -m pip install --user -U pipx
 
 echo 'Install python required packages using pipx.'
-pipx install --force 'python-lsp-server[all]'
-pipx install --force Django
-pipx install --force autoflake
-pipx install --force black
-pipx install --force completions
-pipx install --force djhtml
-pipx install --force docker-compose
-pipx install --force doq
-pipx install --force flake8
-pipx install --force httpie
-pipx install --force isort
-pipx install --force pipenv
-pipx install --force poetry
-pipx install --force pycodestyle
-pipx install --force pylint
-pipx install --force pyright
-pipx install --force tox
-pipx install --force yapf
+python -m pipx install --force 'python-lsp-server[all]'
+python -m pipx install --force Django
+python -m pipx install --force autoflake
+python -m pipx install --force black
+python -m pipx install --force completions
+python -m pipx install --force djhtml
+python -m pipx install --force docker-compose
+python -m pipx install --force doq
+python -m pipx install --force flake8
+python -m pipx install --force httpie
+python -m pipx install --force isort
+python -m pipx install --force pipenv
+python -m pipx install --force poetry
+python -m pipx install --force pycodestyle
+python -m pipx install --force pylint
+python -m pipx install --force pyright
+python -m pipx install --force tox
+python -m pipx install --force yapf
 
 echo 'Install nvim required packages.'
 pip install --user pynvim

@@ -4,13 +4,14 @@ set -eo pipefail
 echo '##################    Harvesting files...    ##################'
 
 echo "Harvest .config directory."
-cat ~/.config/mimeapps.list > ${PWD%/*}"/.config/mimeapps.list"
-cat ~/.config/starship.toml > ${PWD%/*}"/.config/starship.toml"
+cat ~/.config/mimeapps.list >${PWD%/*}"/.config/mimeapps.list"
+cat ~/.config/starship.toml >${PWD%/*}"/.config/starship.toml"
 cp -r ~/.config/alacritty ${PWD%/*}"/.config/"
 cp -r ~/.config/dunst ${PWD%/*}"/.config/"
 cp -r ~/.config/fd ${PWD%/*}"/.config/"
 cp -r ~/.config/gtk-3.0 ${PWD%/*}"/.config/"
 cp -r ~/.config/gtk-4.0 ${PWD%/*}"/.config/"
+cp -r ~/.config/i3 ${PWD%/*}"/.config/"
 cp -r ~/.config/lf ${PWD%/*}"/.config/"
 cp -r ~/.config/nitrogen ${PWD%/*}"/.config/"
 cp -r ~/.config/picom ${PWD%/*}"/.config/"
@@ -21,26 +22,25 @@ cp -r ~/.config/volumeicon ${PWD%/*}"/.config/"
 rsync -a ~/.config/nvim ${PWD%/*}"/.config/" --exclude plugin
 
 echo "Harvest .i3 directory."
-cp -r ~/.i3  ${PWD%/*}"/"
 
 echo 'Harvest .bash files.'
-cat ~/.bash_profile > ${PWD%/*}"/.bash_profile"
-cat ~/.bashrc > ${PWD%/*}"/.bashrc"
-cat ~/.dir_colors > ${PWD%/*}"/.dir_colors"
-cat ~/.profile > ${PWD%/*}"/.profile"
+cat ~/.bash_profile >${PWD%/*}"/.bash_profile"
+cat ~/.bashrc >${PWD%/*}"/.bashrc"
+cat ~/.dir_colors >${PWD%/*}"/.dir_colors"
+cat ~/.profile >${PWD%/*}"/.profile"
 
 echo 'Harvest git config files.'
-cat ~/.gitconfig > ${PWD%/*}"/.gitconfig"
-cat ~/.gitignore > ${PWD%/*}"/.gitignore_global"
+cat ~/.gitconfig >${PWD%/*}"/.gitconfig"
+cat ~/.gitignore >${PWD%/*}"/.gitignore_global"
 
 echo 'Harvest gtkrc-2.0 file.'
-cat ~/.gtkrc-2.0 > ${PWD%/*}"/gtkrc-2.0"
+cat ~/.gtkrc-2.0 >${PWD%/*}"/gtkrc-2.0"
 
 echo 'Harvest npmrc file.'
-cat ~/.npmrc > ${PWD%/*}"/.npmrc"
+cat ~/.npmrc >${PWD%/*}"/.npmrc"
 
 echo 'Harvest .direnvrc file.'
-cat ~/.direnvrc > ${PWD%/*}"/.direnvrc"
+cat ~/.direnvrc >${PWD%/*}"/.direnvrc"
 
 echo "Harvest fonts."
 cp -r /usr/share/fonts/DaddyTimeMono ${PWD%/*}"/.fonts/"
