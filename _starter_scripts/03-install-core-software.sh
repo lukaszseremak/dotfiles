@@ -49,6 +49,7 @@ yay -S --needed \
 	picom-git \
 	playerctl \
 	polybar \
+	pamixer \
 	postgresql \
 	prettier \
 	python-pip \
@@ -102,6 +103,7 @@ yay -S --needed \
 	poppler \
 	transmission-cli \
 	transmission-gtk \
+	ueberzug \
 	wkhtmltopdf
 
 echo 'Upgrade pip version.'
