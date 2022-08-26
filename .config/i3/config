@@ -57,8 +57,8 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+Ctrl+Right workspace next
 bindsym $mod+Ctrl+Left workspace prev
 
-bindsym $mod+Shift+c reload;exec dunstify -i refresh 'reload i3 config' -u normal
-bindsym $mod+Shift+r restart;exec dunstify -i refresh 'restart i3' -u normal
+bindsym $mod+Shift+c exec dunstify -i refresh 'reload i3 config' -u normal;reload
+bindsym $mod+Shift+r exec dunstify -i refresh 'restart i3' -u normal;restart
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1

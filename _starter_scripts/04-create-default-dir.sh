@@ -15,6 +15,6 @@ echo "Creating all folders."
 [ -d $HOME"/Programs" ] || mkdir -p $HOME"/Programs"
 [ -d $HOME"/Projects" ] || mkdir -p $HOME"/Projects"
 [ -d $HOME"/Videos" ] || mkdir -p $HOME"/Videos"
-[ -d /usr/share/backgrounds/ ] || mkdir -p /usr/share/backgrounds/
+[ -d /usr/share/backgrounds/ ] || sudo mkdir -p /usr/share/backgrounds/
 
 echo "##################    Default folders created!    ##################"

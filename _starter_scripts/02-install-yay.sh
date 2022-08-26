@@ -27,7 +27,7 @@ else
 fi
 
 echo "Adding options to Pacman conf file."
-sed '/UseSyslog/s/^#//' -i /etc/pacman.conf
-sed '/Color/s/^#//' -i /etc/pacman.conf
-sed '/CheckSpace/s/^#//' -i /etc/pacman.conf
-sed '/VerbosePkgLists/s/^#//' -i /etc/pacman.conf
+sudo sed '/UseSyslog/s/^#//' -i /etc/pacman.conf
+sudo sed '/Color/s/^#//' -i /etc/pacman.conf
+sudo sed '/CheckSpace/s/^#//' -i /etc/pacman.conf
+sudo sed '/VerbosePkgLists/s/^#//' -i /etc/pacman.conf

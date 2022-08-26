@@ -215,3 +215,5 @@ ex=:\
 eval "$(starship init bash)"
 eval "$(direnv hook bash)"
 eval "$(register-python-argcomplete pipx)"
+
+export PATH=$PATH:$HOME/.local/bin
