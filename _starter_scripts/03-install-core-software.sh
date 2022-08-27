@@ -23,12 +23,12 @@ yay -S --needed \
 	fzf \
 	gimp \
 	git \
+	go-md2man \
 	google-chrome-beta \
 	highlight \
 	htop \
 	i3-gaps \
 	imagemagick \
-	go-md2man \
 	imagewriter \
 	ipython \
 	jq \
@@ -45,11 +45,12 @@ yay -S --needed \
 	notepadqq \
 	npm \
 	openssh \
+	pamixer \
 	papirus-icon-theme \
+	pavucontrol \
 	picom-git \
 	playerctl \
 	polybar \
-	pamixer \
 	postgresql \
 	prettier \
 	python-pip \
@@ -74,8 +75,8 @@ yay -S --needed \
 	unzip \
 	vlc \
 	volumeicon \
-	xdotool \
 	wget \
+	xdotool \
 	yad \
 	yarn \
 	zip
