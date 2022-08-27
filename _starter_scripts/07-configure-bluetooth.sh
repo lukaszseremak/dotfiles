@@ -10,5 +10,5 @@ if grep -Fxq "AutoEnable=true" /etc/bluetooth/main.conf; then
 	echo "bluetooth is auto enabled."
 else
 	echo "auto enabling bluetooth."
-	echo 'AutoEnable=true' | sudo tee -a /etc/bluetooth/main.conf
+  sudo sed '/AutoEnable=true/s/^#//' -i /etc/bluetooth/main.conf
 fi
