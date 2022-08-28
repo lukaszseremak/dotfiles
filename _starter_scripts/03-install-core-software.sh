@@ -24,7 +24,7 @@ yay -S --needed \
 	gimp \
 	git \
 	go-md2man \
-	google-chrome-beta \
+	google-chrome \
 	highlight \
 	htop \
 	i3-gaps \
