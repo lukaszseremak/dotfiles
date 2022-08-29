@@ -3,7 +3,7 @@ font xft:DaddyTimeMono Nerd Font 11
 workspace_auto_back_and_forth yes
 
 # monitors settings
-set $monitor1 eDP1
+set $monitor1 eDP-1
 
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 bindsym $mod+F1 exec playerctl --player=spotify play-pause

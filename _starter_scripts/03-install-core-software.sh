@@ -40,6 +40,7 @@ yay -S --needed \
 	lxappearance-gtk3 \
 	meld \
 	msodbcsql17 \
+  manjaro-pipewire \
 	neofetch \
 	neovim \
 	neovim-symlinks \
