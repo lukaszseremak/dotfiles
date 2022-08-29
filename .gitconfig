@@ -44,3 +44,7 @@
 	oldHighlight = red bold 52
 	newNormal = green bold
 	newHighlight = green bold 22
+[http]
+	proxy = http://10.158.100.2:8080
+[https]
+	proxy = http://10.158.100.2:8080

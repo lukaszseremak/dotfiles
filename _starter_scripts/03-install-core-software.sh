@@ -8,6 +8,7 @@ yay -S --needed \
 	aritim-dark-gtk-git \
 	bind \
 	brave-beta-bin \
+	brillo \
 	chromium \
 	cmake \
 	curl \
@@ -25,9 +26,11 @@ yay -S --needed \
 	git \
 	go-md2man \
 	google-chrome \
+	gtk3 \
+	gtk4 \
 	highlight \
 	htop \
-	i3-gaps \
+	i3exit \
 	imagemagick \
 	imagewriter \
 	ipython \
@@ -43,7 +46,9 @@ yay -S --needed \
 	nitrogen \
 	nodejs \
 	notepadqq \
+	noto-fonts-emoji \
 	npm \
+	ntfs-3g \
 	openssh \
 	pamixer \
 	papirus-icon-theme \
@@ -53,12 +58,14 @@ yay -S --needed \
 	polybar \
 	postgresql \
 	prettier \
+	proxyman-git \
 	python-pip \
 	python-pynvim \
 	python-pyodbc \
 	qt5ct \
 	ripgrep \
 	rofi \
+	rsync \
 	rust \
 	screenfetch \
 	scrot \
@@ -67,16 +74,18 @@ yay -S --needed \
 	sshpass \
 	starship \
 	stylua \
-	teams \
 	terraform \
 	the_silver_searcher \
+	ttf-dejavu \
 	unixodbc \
 	unrar \
 	unzip \
 	vlc \
 	volumeicon \
 	wget \
+	xclip \
 	xdotool \
+	xfce4-power-manager \
 	yad \
 	yarn \
 	zip
@@ -148,5 +157,8 @@ npm i -g neovim
 
 echo 'Add user to video group.'
 sudo usermod -aG video $USER
+
+echo 'Remove redundant files'
+sudo rm -f /usr/bin/blurlock
 
 echo "##################    Core software installed.    ##################"

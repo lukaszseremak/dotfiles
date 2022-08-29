@@ -1,13 +1,9 @@
-include ~/.i3/theme.conf
-include ~/.i3/rules.conf
-include ~/.i3/workspaces.conf
-
 set $mod Mod4
 font xft:DaddyTimeMono Nerd Font 11
 workspace_auto_back_and_forth yes
 
 # monitors settings
-set $monitor1 eDP-1
+set $monitor1 eDP1
 
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 bindsym $mod+F1 exec playerctl --player=spotify play-pause
@@ -24,9 +20,9 @@ bindsym $mod+q kill
 bindsym $mod+l exec --no-startup-id blurlock
 bindsym $mod+0 exec ~/.scripts/rofi/powermenu.sh
 
-bindsym XF86AudioLowerVolume exec changevolume down
-bindsym XF86AudioMute exec changevolume mute
-bindsym XF86AudioRaiseVolume exec changevolume up
+bindsym XF86AudioRaiseVolume exec --no-startup-id changevolume up
+bindsym XF86AudioLowerVolume exec --no-startup-id changevolume down
+bindsym XF86AudioMute exec --no-startup-id changevolume mute
 
 bindsym XF86MonBrightnessDown exec changebrightness down
 bindsym XF86MonBrightnessUp exec changebrightness up
@@ -61,6 +57,7 @@ bindsym $mod+Shift+c exec dunstify -i refresh 'reload i3 config' -u normal;reloa
 bindsym $mod+Shift+r exec dunstify -i refresh 'restart i3' -u normal;restart
 
 # Autostart applications
+exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id clipit
 exec --no-startup-id xfce4-power-manager
@@ -71,6 +68,99 @@ exec --no-startup-id xautolock -time 10 -locker blurlock -corners 000-
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
-exec_always --no-startup-id killall -USR1 volumeicon
 exec_always --no-startup-id killall -USR1 xautolock
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf --experimental-backends
+
+# THEME
+# class                   border  backgr. text    indic.   child_border
+client.focused            #96CDFB #96CDFB #0f0f17 #FAE3B0  #96CDFB
+client.focused_inactive   #11111c #0f0f17 #96CDFB #454948  #a6da95
+client.unfocused          #11111c #0f0f17 #96CDFB #454948  #222222
+client.urgent             #F28FAD #FAE3B0 #0f0f17 #96CDFB  #F28FAD
+client.placeholder        #000000 #0c0c0c #96CDFB #000000  #0c0c0c
+
+client.background         #151a20
+
+# WORKSPACES
+
+workspace 1 output $monitor1
+workspace 2 output $monitor1
+workspace 3 output $monitor1
+workspace 4 output $monitor1
+workspace 5 output $monitor1
+workspace 6 output $monitor1
+workspace 7 output $monitor1
+workspace 8 output $monitor1
+workspace 9 output $monitor1
+
+#Define WS Vars
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+
+# Move focused container to workspace
+bindsym $mod+Ctrl+1 move container to workspace $ws1
+bindsym $mod+Ctrl+2 move container to workspace $ws2
+bindsym $mod+Ctrl+3 move container to workspace $ws3
+bindsym $mod+Ctrl+4 move container to workspace $ws4
+bindsym $mod+Ctrl+5 move container to workspace $ws5
+bindsym $mod+Ctrl+6 move container to workspace $ws6
+bindsym $mod+Ctrl+7 move container to workspace $ws7
+bindsym $mod+Ctrl+8 move container to workspace $ws8
+bindsym $mod+Ctrl+9 move container to workspace $ws9
+
+# Move to workspace with focused container
+bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2; workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3; workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4; workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5; workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
+
+# RULES
+
+new_window pixel 2
+new_float normal
+
+hide_edge_borders smart
+
+for_window [class="^.*"] border pixel 5
+gaps inner 38
+gaps outer 40
+smart_borders on
+
+for_window [title="alsamixer"] floating enable border pixel 1
+for_window [class="Lightdm-settings"] floating enable
+for_window [class="Lxappearance"] floating enable sticky enable border normal
+for_window [class="Manjaro Settings Manager"] floating enable border normal
+for_window [title="MuseScore: Play Panel"] floating enable
+for_window [class="Nitrogen"] floating enable sticky enable border normal
+for_window [class="Pavucontrol"] floating enable resize set 840 480
+for_window [class="qt5ct"] floating enable sticky enable border normal
+for_window [class="Qtconfig-qt4"] floating enable sticky enable border normal
+for_window [class="Simple-scan"] floating enable border normal
+for_window [class="(?i)System-config-printer.py"] floating enable border normal
+for_window [class="(?i)virtualbox"] floating enable border normal
+for_window [class="Xfburn"] floating enable
+for_window [class="Blueman-manager"] floating enable resize set 840 480
+for_window [class="Yad" title="yad-calendar"] floating enable

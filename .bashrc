@@ -31,6 +31,8 @@ export FZF_ALT_C_COMMAND='fd --hidden --type directory . $PWD'
 
 [[ -f ~/.bash_prompt ]] && . ~/.bash_prompt
 [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
+[ -r /usr/share/fzf/completion.bash ] && . /usr/share/fzf/completion.bash
+[ -r /usr/share/fzf/key-bindings.bash ] && . /usr/share/fzf/key-bindings.bash
 [[ $- != *i* ]] && return
 
 # pyenv
@@ -215,5 +217,3 @@ ex=:\
 eval "$(starship init bash)"
 eval "$(direnv hook bash)"
 eval "$(register-python-argcomplete pipx)"
-
-export PATH=$PATH:$HOME/.local/bin
