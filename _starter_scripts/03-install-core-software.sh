@@ -58,7 +58,6 @@ yay -S --needed \
 	polybar \
 	postgresql \
 	prettier \
-	proxyman-git \
 	python-pip \
 	python-pynvim \
 	python-pyodbc \
