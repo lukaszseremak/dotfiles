@@ -61,7 +61,6 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id clipit
 exec --no-startup-id xfce4-power-manager
-exec --no-startup-id nitrogen --restore --set-scaled; sleep 1; picom -b
 exec --no-startup-id nm-applet
 exec --no-startup-id setxkbmap pl
 exec --no-startup-id xautolock -time 10 -locker blurlock -corners 000-
@@ -69,7 +68,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id killall -USR1 xautolock
-exec_always --no-startup-id picom --config ~/.config/picom/picom.conf --experimental-backends
+exec_always --no-startup-id nitrogen --restore --set-scaled; sleep 1; picom -b --config ~/.config/picom/picom.conf
 
 # THEME
 # class                   border  backgr. text    indic.   child_border

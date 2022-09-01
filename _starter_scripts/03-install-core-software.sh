@@ -3,11 +3,13 @@ set -eo pipefail
 
 echo "Install packages using yay."
 yay -S --needed \
+	acpi \
+	acpid \
 	alacritty \
 	arandr \
-	aritim-dark-gtk-git \
 	bind \
 	brave-beta-bin \
+	bridge-utils \
 	brillo \
 	chromium \
 	cmake \
@@ -38,9 +40,11 @@ yay -S --needed \
 	lazygit \
 	libcurl-gnutls \
 	lxappearance-gtk3 \
+	lxinput-gtk3 \
 	meld \
 	msodbcsql17 \
-  manjaro-pipewire \
+	manjaro-pipewire \
+	mpv \
 	neofetch \
 	neovim \
 	neovim-symlinks \
