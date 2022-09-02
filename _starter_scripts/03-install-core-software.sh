@@ -15,6 +15,7 @@ yay -S --needed \
 	cmake \
 	curl \
 	dbus \
+	dhcpcd \
 	diff-so-fancy \
 	direnv \
 	docker-ls \
@@ -40,24 +41,28 @@ yay -S --needed \
 	ipython \
 	jq \
 	lazygit \
+	lib32-libnm \
 	libcurl-gnutls \
+	lib32-openssl \
 	libproxy \
 	lxappearance-gtk3 \
 	lxinput-gtk3 \
-	meld \
-	msodbcsql17 \
 	manjaro-pipewire \
+	meld \
 	mpv \
+	msodbcsql17 \
 	neofetch \
 	neovim \
 	neovim-symlinks \
 	nitrogen \
 	nodejs \
-	notepadqq \
 	noto-fonts-emoji \
 	npm \
 	ntfs-3g \
+	openconnect \
+	openresolv \
 	openssh \
+	openssl \
 	pamixer \
 	papirus-icon-theme \
 	pavucontrol \
@@ -89,10 +94,13 @@ yay -S --needed \
 	unrar \
 	unzip \
 	wget \
+	wireless-regdb \
+	wireless_tools \
 	xclip \
-	xdotool \
 	xdg-dbus-proxy \
+	xdotool \
 	xfce4-power-manager \
+	xorg-smproxy \
 	yad \
 	yarn \
 	zip
