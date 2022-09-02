@@ -17,9 +17,8 @@ export HISTSIZE=
 
 use_color=true
 set -o vi
-export LS_OPTIONS='-hN --color=auto --group-directories-first'
 eval "$(dircolors -b)"
-alias ls='ls $LS_OPTIONS'
+alias ls='exa --color always --icons --group-directories-first'
 alias ccat="highlight --out-format=ansi"
 alias grep="grep --color=auto"
 

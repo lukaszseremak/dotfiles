@@ -21,6 +21,7 @@ yay -S --needed \
 	downgrade \
 	dunst \
 	evince \
+	exa \
 	fd \
 	filezilla \
 	fzf \
@@ -153,6 +154,7 @@ python -m pipx install --force pycodestyle
 python -m pipx install --force pylint
 python -m pipx install --force pyright
 python -m pipx install --force tox
+python -m pipx install --force tldr
 python -m pipx install --force yapf
 
 echo 'Install nvim required packages.'
