@@ -10,6 +10,7 @@ cp -r ${PWD%/*}"/.config/fd" ~/.config/
 cp -r ${PWD%/*}"/.config/gtk-3.0" ~/.config/
 cp -r ${PWD%/*}"/.config/i3" ~/.config/
 cp -r ${PWD%/*}"/.config/lf" ~/.config/
+cp -r ${PWD%/*}"/.config/mpv" ~/.config/
 cp -r ${PWD%/*}"/.config/nitrogen" ~/.config/
 cp -r ${PWD%/*}"/.config/nvim" ~/.config/
 cp -r ${PWD%/*}"/.config/picom" ~/.config/

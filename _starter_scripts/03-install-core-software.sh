@@ -28,6 +28,7 @@ yay -S --needed \
 	git \
 	go-md2man \
 	google-chrome \
+	gssproxy \
 	gtk3 \
 	gtk4 \
 	highlight \
@@ -39,6 +40,7 @@ yay -S --needed \
 	jq \
 	lazygit \
 	libcurl-gnutls \
+	libproxy \
 	lxappearance-gtk3 \
 	lxinput-gtk3 \
 	meld \
@@ -78,17 +80,17 @@ yay -S --needed \
 	sshpass \
 	starship \
 	stylua \
+	subliminal \
 	terraform \
 	the_silver_searcher \
 	ttf-dejavu \
 	unixodbc \
 	unrar \
 	unzip \
-	vlc \
-	volumeicon \
 	wget \
 	xclip \
 	xdotool \
+	xdg-dbus-proxy \
 	xfce4-power-manager \
 	yad \
 	yarn \
