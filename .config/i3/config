@@ -56,8 +56,6 @@ bindsym $mod+Ctrl+Left workspace prev
 bindsym $mod+Shift+c exec dunstify -i refresh 'reload i3 config' -u normal;reload
 bindsym $mod+Shift+r exec dunstify -i refresh 'restart i3' -u normal;restart
 
-bindsym $mod+c [class="fm"] scratchpad show; move position center
-
 
 # Autostart applications
 exec --no-startup-id dex --autostart --environment i3
@@ -72,7 +70,6 @@ exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id killall -USR1 xautolock
 exec_always --no-startup-id nitrogen --restore --set-scaled; sleep 1; picom -b --config ~/.config/picom/picom.conf
-exec_always --no-startup-id pgrep -f '^alacritty --class fm,fm' || alacritty --class fm,fm -e lf
 
 
 # THEME

@@ -66,4 +66,4 @@ cp ~/.local/bin/screenshot ${PWD%/*}"/.local/bin/screenshot"
 cp ~/.local/bin/wifimenu ${PWD%/*}"/.local/bin/wifimenu"
 
 echo "Harvest backgrounds."
-cp /usr/share/backgrounds/* ${PWD%/*}"/.backgrounds/"
+cp -r ~/.backgrounds/ ${PWD%/*}"/"
