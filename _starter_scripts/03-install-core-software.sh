@@ -59,6 +59,7 @@ yay -S --needed \
 	noto-fonts-emoji \
 	npm \
 	ntfs-3g \
+	netctl \
 	openconnect \
 	openresolv \
 	openssh \
