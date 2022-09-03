@@ -17,11 +17,10 @@ sudo systemctl enable NetworkManager.service
 sudo systemctl start NetworkManager.service
 
 echo 'Change /etc/resolv.conf config'
-sudo rm /etc/resolv.conf
-sudo bash -c 'echo "nameserver 8.8.8.8" > /etc/resolv.conf'
-sudo bash -c 'echo "[network]" > /etc/wsl.conf'
-sudo bash -c 'echo "generateResolvConf = false" >> /etc/wsl.conf'
-sudo chattr +i /etc/resolv.conf
+sudo bash -c 'cat << EOF > /etc/resolv.conf
+search home
+nameserver 192.168.1.1
+EOF'
 
 sudo bash -c 'cat << EOF > /etc/hosts
 # Standard host addresses
@@ -31,6 +30,10 @@ ff02::1    ip6-allnodes
 ff02::2    ip6-allrouters
 # This host address
 127.0.1.1  seremak
+EOF'
+
+sudo bash -c 'cat << EOF > /etc/hostname
+seremak
 EOF'
 
 echo "##################    Network management software installed!    ##################"
