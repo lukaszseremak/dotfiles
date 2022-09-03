@@ -16,12 +16,4 @@ echo 'Start and Enable NetworkManager!'
 sudo systemctl enable NetworkManager.service
 sudo systemctl start NetworkManager.service
 
-echo 'Setting Up Firewall with UFW'
-yay -S --needed ufw
-sudo ufw enable
-sudo ufw default deny incoming
-sudo ufw default allow outgoing
-sudo ufw allow ssh
-
-
 echo "##################    Network management software installed!    ##################"

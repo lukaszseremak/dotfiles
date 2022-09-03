@@ -56,4 +56,4 @@ echo "Copy custom themes directory."
 cp -r ${PWD%/*}"/.themes/"* ~/.themes/
 
 echo "Copy backgrounds."
-cp -r ${PWD%/*}"/.backgrounds/"* ~/.backgrounds/
+cp -r ${PWD%/*}"/.backgrounds/" ~/
