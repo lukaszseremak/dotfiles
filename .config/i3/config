@@ -19,6 +19,8 @@ bindsym $mod+d exec --no-startup-id rofi -no-lazy-grab -show drun -modi drun -co
 bindsym $mod+q kill
 bindsym $mod+l exec --no-startup-id blurlock
 bindsym $mod+0 exec ~/.scripts/rofi/powermenu.sh
+bindsym $mod+c [class="fm"] scratchpad show; move position center border pixel 2
+
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id changevolume up
 bindsym XF86AudioLowerVolume exec --no-startup-id changevolume down
@@ -69,7 +71,9 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id killall -USR1 xautolock
-exec_always --no-startup-id nitrogen --restore --set-scaled; sleep 1; picom -b --config ~/.config/picom/picom.conf
+exec_always --no-startup-id nitrogen --restore --set-scaled; sleep 1; picom -b --config ~/.config/picom/picom.conf --experimental-backends
+exec_always --no-startup-id pgrep -f '^alacritty --class fm,fm' || alacritty -t scratchpad --class fm,fm -e lf
+
 
 
 # THEME

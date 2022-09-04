@@ -3,6 +3,7 @@ set -eo pipefail
 
 echo "Creating all folders."
 
+[ -d $HOME"/.backgrounds" ] || mkdir -p $HOME"/.backgrounds"
 [ -d $HOME"/.fonts" ] || mkdir -p $HOME"/.fonts"
 [ -d $HOME"/.icons" ] || mkdir -p $HOME"/.icons"
 [ -d $HOME"/.themes" ] || mkdir -p $HOME"/.themes"
@@ -15,6 +16,5 @@ echo "Creating all folders."
 [ -d $HOME"/Programs" ] || mkdir -p $HOME"/Programs"
 [ -d $HOME"/Projects" ] || mkdir -p $HOME"/Projects"
 [ -d $HOME"/Videos" ] || mkdir -p $HOME"/Videos"
-[ -d /usr/share/backgrounds/ ] || sudo mkdir -p /usr/share/backgrounds/
 
 echo "##################    Default folders created!    ##################"
