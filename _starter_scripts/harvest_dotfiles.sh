@@ -20,6 +20,7 @@ cp -r ~/.config/polybar ${PWD%/*}"/.config/"
 cp -r ~/.config/qt5ct ${PWD%/*}"/.config/"
 cp -r ~/.config/rofi ${PWD%/*}"/.config/"
 cp -r ~/.config/volumeicon ${PWD%/*}"/.config/"
+cp -r ~/.config/zathura ${PWD%/*}"/.config/"
 rsync -a ~/.config/nvim ${PWD%/*}"/.config/" --exclude plugin
 
 echo "Harvest .i3 directory."

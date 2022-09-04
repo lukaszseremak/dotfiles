@@ -2,6 +2,18 @@
 set -eo pipefail
 
 declare -a packages=(
+	"epdfview"
+	"palemoon-bin"
+	"manjaro-ranger-settings"
+	"bmenu"
+	"ranger"
+	"xterm"
+	"manjaro-zsh-config"
+	"zsh-autosuggestions"
+	"zsh-completions"
+	"zsh-history-substring-search"
+	"zsh-syntax-highlighting"
+	"zsh-theme-powerlevel10k"
 	"zsh"
 )
 for package in ${packages[@]}; do

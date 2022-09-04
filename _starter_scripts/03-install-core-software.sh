@@ -21,7 +21,6 @@ yay -S --needed \
 	docker-ls \
 	downgrade \
 	dunst \
-	evince \
 	exa \
 	fd \
 	filezilla \
@@ -98,12 +97,18 @@ yay -S --needed \
 	wireless-regdb \
 	wireless_tools \
 	xclip \
+	xcursor-simp1e-dark \
 	xdg-dbus-proxy \
 	xdotool \
 	xfce4-power-manager \
 	xorg-smproxy \
 	yad \
 	yarn \
+	zathura \
+	zathura-cb \
+	zathura-djvu \
+	zathura-pdf-mupdf \
+	zathura-ps \
 	zip
 
 echo "Install nautilus with gadgets."

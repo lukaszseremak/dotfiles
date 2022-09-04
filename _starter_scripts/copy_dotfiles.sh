@@ -18,6 +18,7 @@ cp -r ${PWD%/*}"/.config/polybar" ~/.config/
 cp -r ${PWD%/*}"/.config/qt5ct" ~/.config/
 cp -r ${PWD%/*}"/.config/rofi" ~/.config/
 cp -r ${PWD%/*}"/.config/volumeicon" ~/.config/
+cp -r ${PWD%/*}"/.config/zathura" ~/.config/
 
 echo 'Copy .bash files.'
 cat ${PWD%/*}"/.bash_profile" >~/.bash_profile
