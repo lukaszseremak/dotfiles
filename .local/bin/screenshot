@@ -1,8 +1,6 @@
 #! /bin/sh
 output='/home/seremak/Pictures/screenshots/%Y_%m_%d_%H%M%S_screenshot.png'
 
-rofi_command="rofi -config ~/.config/rofi/screenshot_config.rasi -p "power""
-
 #### Options ###
 select=""
 focused_window=""
@@ -10,19 +8,19 @@ whole_screen=""
 # Variable passed to rofi
 options="$select\n$focused_window\n$whole_screen"
 
-chosen="$(echo -e "$options" | $rofi_command -dmenu -i -selected-row 1)"
+chosen="$(echo -e "$options" | rofi -theme-str '@import "screenshot_config.rasi"' -p "power" -dmenu -i -selected-row 1)"
 case $chosen in
-    $select)
-        dunstify 'Select area for the screenshot.' -u normal -i "dialog-warning"
-        scrot "$output" --select --line mode=edge || exit
-        dunstify 'Screenshot of selected area taken.' -u normal -i "camera"
-        ;;
-    $focused_window)
-        scrot --delay 1 "$output" --focused --border || exit
-        dunstify 'Screenshot of focused window taken.' -u normal -i "camera"
-        ;;
-    $whole_screen)
-        scrot --delay 1 "$output" || exit
-        dunstify 'Screenshot of the whole screen taken.' -u normal -i "camera"
-        ;;
+$select)
+	dunstify 'Select area for the screenshot.' -u normal -i "dialog-warning"
+	scrot "$output" --select --line mode=edge || exit
+	dunstify 'Screenshot of selected area taken.' -u normal -i "camera"
+	;;
+$focused_window)
+	scrot --delay 1 "$output" --focused --border || exit
+	dunstify 'Screenshot of focused window taken.' -u normal -i "camera"
+	;;
+$whole_screen)
+	scrot --delay 1 "$output" || exit
+	dunstify 'Screenshot of the whole screen taken.' -u normal -i "camera"
+	;;
 esac

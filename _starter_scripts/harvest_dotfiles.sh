@@ -14,7 +14,6 @@ cp -r ~/.config/gtk-3.0 ${PWD%/*}"/.config/"
 cp -r ~/.config/i3 ${PWD%/*}"/.config/"
 cp -r ~/.config/lf ${PWD%/*}"/.config/"
 cp -r ~/.config/mpDris2 ${PWD%/*}"/.config/"
-cp -r ~/.config/mpd ${PWD%/*}"/.config/"
 cp -r ~/.config/ncmpcpp ${PWD%/*}"/.config/"
 cp -r ~/.config/nitrogen ${PWD%/*}"/.config/"
 cp -r ~/.config/picom ${PWD%/*}"/.config/"
@@ -23,6 +22,7 @@ cp -r ~/.config/qt5ct ${PWD%/*}"/.config/"
 cp -r ~/.config/rofi ${PWD%/*}"/.config/"
 cp -r ~/.config/volumeicon ${PWD%/*}"/.config/"
 cp -r ~/.config/zathura ${PWD%/*}"/.config/"
+rsync -a ~/.config/mpd ${PWD%/*}"/.config/" --exclude 'log' --exclude 'state'
 rsync -a ~/.config/mpv ${PWD%/*}"/.config/" --exclude watch_later
 rsync -a ~/.config/nvim ${PWD%/*}"/.config/" --exclude plugin
 
