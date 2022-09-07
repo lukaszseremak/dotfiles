@@ -33,6 +33,8 @@ cmd execute ${{
     wine "$f"
 }}
 
+cmd open-with %"$@" "$fx"
+
 # Remove some defaults
 map m
 map o
@@ -55,6 +57,7 @@ map R reload
 map mf mkfile
 map md mkdir
 map C clear
+map ` push :open-with<space>
 
 # Movement
 # map gd cd ~/documents

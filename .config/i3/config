@@ -6,10 +6,9 @@ workspace_auto_back_and_forth yes
 set $monitor1 eDP-1
 
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
-bindsym $mod+F1 exec playerctl --player=spotify play-pause
-bindsym $mod+F2 exec playerctl --all-players stop
-bindsym $mod+F3 exec playerctl --player=spotify previous
-bindsym $mod+F4 exec playerctl --player=spotify next
+bindsym $mod+F1 exec playerctl --player=mpd play-pause
+bindsym $mod+F2 exec playerctl --player=mpd previous
+bindsym $mod+F3 exec playerctl --player=mpd next
 bindsym $mod+F10 exec sh ~/.i3/only_laptop.sh
 bindsym $mod+F11 exec sh ~/.i3/home_single_monitor.sh
 bindsym $mod+Print exec --no-startup-id screenshot
@@ -21,6 +20,7 @@ bindsym $mod+l exec --no-startup-id blurlock
 bindsym $mod+0 exec ~/.scripts/rofi/powermenu.sh
 bindsym $mod+c [class="fm"] scratchpad show; move position center
 bindsym $mod+n [class="ttrm"] scratchpad show; move position center
+bindsym $mod+p [class="mus"] scratchpad show; move position center
 
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id changevolume up
@@ -71,10 +71,12 @@ exec --no-startup-id xautolock -time 10 -locker blurlock -corners 000-
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
+exec_always --no-startup-id mpd --kill; mpd; mpDris2;
 exec_always --no-startup-id killall -USR1 xautolock
-exec_always --no-startup-id nitrogen --restore --set-scaled; sleep 1; picom -b --config ~/.config/picom/picom.conf --transparent-clipping
+exec_always --no-startup-id nitrogen --restore --set-scaled; sleep 1; picom -b --config ~/.config/picom/picom.conf
 exec_always --no-startup-id pgrep -f '^alacritty -t scratchpad --class fm,fm' || alacritty -t scratchpad --class fm,fm -e lf
 exec_always --no-startup-id pgrep -f '^alacritty -t scratchpad --class ttrm,ttrm' || alacritty -t scratchpad --class ttrm,ttrm
+exec_always --no-startup-id pgrep -f '^alacritty -t scratchpad --class mus,mus' || alacritty -t scratchpad --class mus,mus -e ncmpcpp
 
 
 # THEME

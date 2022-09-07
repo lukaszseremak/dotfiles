@@ -48,9 +48,13 @@ yay -S --needed \
 	lxinput-gtk3 \
 	manjaro-pipewire \
 	meld \
+	mpc \
+	mpd \
+	mpdris2 \
 	mpv \
 	msodbcsql17 \
 	neofetch \
+	ncmpcpp \
 	neovim \
 	neovim-symlinks \
 	nitrogen \
@@ -110,6 +114,10 @@ yay -S --needed \
 	zathura-pdf-mupdf \
 	zathura-ps \
 	zip
+
+echo 'Enable MPD service.'
+systemctl --user enable --now mpd.service
+systemctl --user enable --now mpDris2.service
 
 echo "Install nautilus with gadgets."
 yay -S nautilus nautilus-open-any-terminal
