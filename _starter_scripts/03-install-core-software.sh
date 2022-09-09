@@ -41,9 +41,10 @@ yay -S --needed \
 	jq \
 	lazygit \
 	lib32-libnm \
-	libcurl-gnutls \
 	lib32-openssl \
+	libcurl-gnutls \
 	libproxy \
+	libxcrypt-compat \
 	lxappearance-gtk3 \
 	lxinput-gtk3 \
 	manjaro-pipewire \
@@ -169,14 +170,15 @@ python -m pipx install --force docker-compose
 python -m pipx install --force doq
 python -m pipx install --force flake8
 python -m pipx install --force httpie
+python -m pipx install --force invoke
 python -m pipx install --force isort
 python -m pipx install --force pipenv
 python -m pipx install --force poetry
 python -m pipx install --force pycodestyle
 python -m pipx install --force pylint
 python -m pipx install --force pyright
-python -m pipx install --force tox
 python -m pipx install --force tldr
+python -m pipx install --force tox
 python -m pipx install --force yapf
 
 echo 'Install nvim required packages.'

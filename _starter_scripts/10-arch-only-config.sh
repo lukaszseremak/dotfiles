@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+set -eo pipefail
+
 echo 'Change /etc/resolv.conf config'
 sudo bash -c 'cat << EOF > /etc/resolv.conf
 search home

@@ -42,3 +42,4 @@ application/x-bittorrent=deluge.desktop;
 image/svg+xml=viewnior.desktop;
 video/mp4=mpv.desktop;vlc.desktop;
 video/x-matroska=mpv.desktop;vlc.desktop;
+application/x-shellscript=nvim.desktop;

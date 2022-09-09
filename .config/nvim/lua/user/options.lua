@@ -44,3 +44,4 @@ vim.cmd [[filetype plugin indent on]]
 vim.cmd("set whichwrap+=<,>,[,],h,l")
 vim.cmd([[set iskeyword+=-]])
 vim.g.python3_host_prog = "/usr/bin/python"
+vim.o.termguicolors = true
