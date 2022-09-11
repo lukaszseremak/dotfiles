@@ -48,6 +48,7 @@ yay -S --needed \
 	lxappearance-gtk3 \
 	lxinput-gtk3 \
 	manjaro-pipewire \
+	mariadb \
 	meld \
 	mpc \
 	mpd \
