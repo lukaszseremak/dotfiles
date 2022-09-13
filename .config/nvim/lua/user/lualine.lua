@@ -7,7 +7,7 @@ end
 lualine.setup({
 	options = {
 		icons_enabled = true,
-		theme = "onenord",
+		theme = "catppuccin",
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = {},
@@ -18,14 +18,14 @@ lualine.setup({
 		lualine_a = { "mode" },
 		lualine_b = {
 			{ "branch", icon = "" },
-			{ "diff", color_added = "#91B362", color_modified = "#FAE994", color_removed = "#EA6C73" },
+			{ "diff", color_added = "#A6E3A1", color_modified = "#F9E2AF", color_removed = "#F38BA8" },
 		},
 		lualine_c = {
 			{ "filename" },
 			{
 				nvim_gps.get_location,
 				cond = nvim_gps.is_available,
-				color = { fg = "#97bc7c" },
+				color = { fg = "#A6E3A1" },
 			},
 		},
 		lualine_x = {

@@ -38,7 +38,7 @@
     icon_position = left
     min_icon_size = 0
     max_icon_size = 32
-    icon_path = /usr/share/icons/fontawesome/
+    icon_path = /home/seremak/.icons/fontawesome
     sticky_history = yes
     history_length = 20
     always_run_script = true

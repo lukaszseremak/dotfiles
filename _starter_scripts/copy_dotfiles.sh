@@ -4,7 +4,10 @@ set -eo pipefail
 echo "Copy .config directory."
 cat ${PWD%/*}"/.config/mimeapps.list" >~/.config/mimeapps.list
 cat ${PWD%/*}"/.config/starship.toml" >~/.config/starship.toml
+cp -r ${PWD%/*}"/.config/Kvantum" ~/.config/
 cp -r ${PWD%/*}"/.config/alacritty" ~/.config/
+cp -r ${PWD%/*}"/.config/bat" ~/.config/
+cp -r ${PWD%/*}"/.config/btop" ~/.config/
 cp -r ${PWD%/*}"/.config/dunst" ~/.config/
 cp -r ${PWD%/*}"/.config/fd" ~/.config/
 cp -r ${PWD%/*}"/.config/gtk-3.0" ~/.config/
@@ -22,6 +25,8 @@ cp -r ${PWD%/*}"/.config/qt5ct" ~/.config/
 cp -r ${PWD%/*}"/.config/rofi" ~/.config/
 cp -r ${PWD%/*}"/.config/volumeicon" ~/.config/
 cp -r ${PWD%/*}"/.config/zathura" ~/.config/
+
+bat cache --build
 
 echo 'Copy .bash files.'
 cat ${PWD%/*}"/.bash_profile" >~/.bash_profile
@@ -47,7 +52,7 @@ echo "Copy fonts."
 sudo bash -c 'cp -r ${PWD%/*}"/.fonts/"* "/usr/share/fonts/"'
 
 echo "Copy icons."
-sudo bash -c 'cp -r ${PWD%/*}"/.icons/"* "/usr/share/icons/"'
+cp -r ${PWD%/*}"/.icons/"* ~/.icons/
 fc-cache
 
 echo "Copy .scripts directory."

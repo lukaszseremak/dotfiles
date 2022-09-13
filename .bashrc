@@ -4,7 +4,7 @@ export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 export GPG_TTY=$(tty)
 export BROWSER=/usr/bin/chromium
 export EDITOR=/usr/bin/nvim
-export BAT_THEME='Coldark-Dark'
+export BAT_THEME='Catppuccin-mocha'
 
 stty -ixon
 shopt -s autocd
@@ -24,6 +24,10 @@ alias ccat="highlight --out-format=ansi"
 alias grep="grep --color=auto"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+export FZF_DEFAULT_OPTS=" \
+--color=spinner:#f5e0dc,hl:#f38ba8 \
+--color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+--color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
 export FZF_PREVIEW_COMMAND="bat --style=numbers,changes --wrap never --color always {} || ccat {}"
 export FZF_CTRL_T_OPTS="--min-height 30 --preview-window right:60% --preview-window noborder --preview '($FZF_PREVIEW_COMMAND) 2> /dev/null'"
 export FZF_CTRL_T_COMMAND='ag --hidden -g ""'

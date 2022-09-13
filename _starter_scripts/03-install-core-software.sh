@@ -11,11 +11,12 @@ yay -S --needed \
 	brave-beta-bin \
 	bridge-utils \
 	brillo \
+	btop \
+	catppuccin-gtk-theme-mocha \
 	chromium \
 	cmake \
 	curl \
 	dbus \
-	dhcpcd \
 	diff-so-fancy \
 	direnv \
 	docker-ls \
@@ -29,21 +30,15 @@ yay -S --needed \
 	git \
 	go-md2man \
 	google-chrome \
-	gssproxy \
 	gtk3 \
 	gtk4 \
 	highlight \
-	htop \
 	i3exit \
 	imagemagick \
 	imagewriter \
 	ipython \
 	jq \
 	lazygit \
-	lib32-libnm \
-	lib32-openssl \
-	libcurl-gnutls \
-	libproxy \
 	libxcrypt-compat \
 	lxappearance-gtk3 \
 	lxinput-gtk3 \
@@ -81,6 +76,7 @@ yay -S --needed \
 	python-pynvim \
 	python-pyodbc \
 	qt5ct \
+	qt5-styleplugins \
 	ripgrep \
 	rofi \
 	rsync \
@@ -103,11 +99,8 @@ yay -S --needed \
 	wireless-regdb \
 	wireless_tools \
 	xclip \
-	xcursor-simp1e-dark \
 	xdg-dbus-proxy \
-	xdotool \
 	xfce4-power-manager \
-	xorg-smproxy \
 	yad \
 	yarn \
 	zathura \
