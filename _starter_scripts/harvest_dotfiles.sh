@@ -6,29 +6,27 @@ echo '##################    Harvesting files...    ##################'
 echo "Harvest .config directory."
 cat ~/.config/mimeapps.list >${PWD%/*}"/.config/mimeapps.list"
 cat ~/.config/starship.toml >${PWD%/*}"/.config/starship.toml"
-cp -r ~/.config/Kvantum ${PWD%/*}"/.config/"
-cp -r ~/.config/alacritty ${PWD%/*}"/.config/"
-cp -r ~/.config/bat ${PWD%/*}"/.config/"
-cp -r ~/.config/btop ${PWD%/*}"/.config/"
-cp -r ~/.config/dunst ${PWD%/*}"/.config/"
-cp -r ~/.config/fd ${PWD%/*}"/.config/"
-cp -r ~/.config/gtk-3.0 ${PWD%/*}"/.config/"
-cp -r ~/.config/i3 ${PWD%/*}"/.config/"
-cp -r ~/.config/lf ${PWD%/*}"/.config/"
-cp -r ~/.config/mpDris2 ${PWD%/*}"/.config/"
-cp -r ~/.config/ncmpcpp ${PWD%/*}"/.config/"
-cp -r ~/.config/nitrogen ${PWD%/*}"/.config/"
-cp -r ~/.config/picom ${PWD%/*}"/.config/"
-cp -r ~/.config/polybar ${PWD%/*}"/.config/"
-cp -r ~/.config/qt5ct ${PWD%/*}"/.config/"
-cp -r ~/.config/rofi ${PWD%/*}"/.config/"
-cp -r ~/.config/volumeicon ${PWD%/*}"/.config/"
-cp -r ~/.config/zathura ${PWD%/*}"/.config/"
-rsync -a ~/.config/mpd ${PWD%/*}"/.config/" --exclude 'log' --exclude 'state'
-rsync -a ~/.config/mpv ${PWD%/*}"/.config/" --exclude watch_later
-rsync -a ~/.config/nvim ${PWD%/*}"/.config/" --exclude plugin
-
-echo "Harvest .i3 directory."
+rsync -avhr ~/.config/Kvantum ${PWD%/*}"/.config/" --delete
+rsync -avhr ~/.config/alacritty ${PWD%/*}"/.config/" --delete
+rsync -avhr ~/.config/bat ${PWD%/*}"/.config/" --delete
+rsync -avhr ~/.config/btop ${PWD%/*}"/.config/" --delete
+rsync -avhr ~/.config/dunst ${PWD%/*}"/.config/" --delete
+rsync -avhr ~/.config/fd ${PWD%/*}"/.config/" --delete
+rsync -avhr ~/.config/gtk-3.0 ${PWD%/*}"/.config/" --delete
+rsync -avhr ~/.config/i3 ${PWD%/*}"/.config/" --delete
+rsync -avhr ~/.config/lf ${PWD%/*}"/.config/" --delete
+rsync -avhr ~/.config/mpDris2 ${PWD%/*}"/.config/" --delete
+rsync -avhr ~/.config/mpd ${PWD%/*}"/.config/" --exclude 'log' --exclude 'state' --delete
+rsync -avhr ~/.config/mpv ${PWD%/*}"/.config/" --exclude watch_later --delete
+rsync -avhr ~/.config/ncmpcpp ${PWD%/*}"/.config/" --delete
+rsync -avhr ~/.config/nitrogen ${PWD%/*}"/.config/" --delete
+rsync -avhr ~/.config/nvim ${PWD%/*}"/.config/" --exclude plugin --delete
+rsync -avhr ~/.config/picom ${PWD%/*}"/.config/" --delete
+rsync -avhr ~/.config/polybar ${PWD%/*}"/.config/" --delete
+rsync -avhr ~/.config/qt5ct ${PWD%/*}"/.config/" --delete
+rsync -avhr ~/.config/rofi ${PWD%/*}"/.config/" --delete
+rsync -avhr ~/.config/volumeicon ${PWD%/*}"/.config/" --delete
+rsync -avhr ~/.config/zathura ${PWD%/*}"/.config/" --delete
 
 echo 'Harvest .bash files.'
 cat ~/.bash_profile >${PWD%/*}"/.bash_profile"
@@ -50,18 +48,18 @@ echo 'Harvest .direnvrc file.'
 cat ~/.direnvrc >${PWD%/*}"/.direnvrc"
 
 echo "Harvest fonts."
-cp -r /usr/share/fonts/DaddyTimeMono ${PWD%/*}"/.fonts/"
-cp -r /usr/share/fonts/Feather ${PWD%/*}"/.fonts/"
-cp -r /usr/share/fonts/fontawesome ${PWD%/*}"/.fonts/"
+rsync -avhr /usr/share/fonts/DaddyTimeMono ${PWD%/*}"/.icons/DaddyTimeMono" --delete
+rsync -avhr /usr/share/fonts/Feather ${PWD%/*}"/.icons/Feather" --delete
+rsync -avhr /usr/share/fonts/fontawesome ${PWD%/*}"/.icons/fontawesome" --delete
 
 echo "Harvest icons."
-cp -r ~/.icons/ ${PWD%/*}"/"
+rsync -avhr ~/.icons/ ${PWD%/*}"/.icons" --delete
 
 echo "Harvest custom themes."
-cp -r ~/.themes/ ${PWD%/*}"/"
+rsync -avhr ~/.themes/ ${PWD%/*}"/.themes" --delete
 
 echo "Harvest .scripts directory."
-cp -r ~/.scripts ${PWD%/*}"/"
+rsync -avhr ~/.scripts/ ${PWD%/*}"/.scripts" --delete
 
 echo "Harvest custom scritps from .local/bin directory."
 cp ~/.local/bin/blurlock ${PWD%/*}"/.local/bin/blurlock"
@@ -72,4 +70,4 @@ cp ~/.local/bin/screenshot ${PWD%/*}"/.local/bin/screenshot"
 cp ~/.local/bin/wifimenu ${PWD%/*}"/.local/bin/wifimenu"
 
 echo "Harvest backgrounds."
-cp -r ~/.backgrounds/ ${PWD%/*}"/"
+rsync -avhr ~/.backgrounds/ ${PWD%/*}"/.backgrounds" --delete
