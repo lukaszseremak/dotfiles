@@ -6,7 +6,7 @@ end
 local custom_colors = {
 	fg = "#CDD6F4",
 	bg = "#151726",
-	bg_brighter = "#1f1f30",
+	bg_brighter = "#1F1F30",
 	grey14 = "#242932",
 }
 
