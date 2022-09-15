@@ -110,6 +110,16 @@ yay -S --needed \
 	zathura-ps \
 	zip
 
+echo 'Setting papirus-folders!'
+[ -d /tmp/papirus-folders ] && rm -rf /tmp/papirus-folders
+mkdir /tmp/papirus-folders
+
+git clone https://github.com/catppuccin/papirus-folders.git /tmp/papirus-folders
+cd /tmp/papirus-folders
+sudo cp -r src/* /usr/share/icons/Papirus
+./papirus-folders -C cat-mocha-blue --theme Papirus-Dark
+cd -
+
 echo 'Enable MPD service.'
 systemctl --user enable --now mpd.service
 systemctl --user enable --now mpDris2.service
