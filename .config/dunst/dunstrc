@@ -17,12 +17,12 @@
     text_icon_padding = 0
     frame_width = 3
     corner_radius = 10
-    frame_color = "#96CDFB"
+    frame_color = "#89B4FA"
     separator_color = frame
     highlight = "#96CDFB"
     sort = yes
     idle_threshold = 120
-    font = DaddyTimeMono Nerd Font 10
+    font = DaddyTimeMono Nerd Font 11
     line_height = 0
     markup = full
     format = "<b>%s</b>\n%b"
@@ -55,20 +55,21 @@
     per_monitor_dpi = false
 
 [urgency_low]
-    background = "#0f0f17"
-    foreground = "#96CDFB"
+    background = "#1E1E2E"
+    foreground = "#CDD6F4"
     timeout = 10
     default_icon = dialog-information
 
 [urgency_normal]
-    background = "#0f0f17"
-    foreground = "#96CDFB"
+    background = "#1E1E2E"
+    foreground = "#CDD6F4"
     timeout = 10
     default_icon = dialog-information
 
 [urgency_critical]
-    background = "#151a20"
-    foreground = "#EE6D85"
+    background = "#1E1E2E"
+    foreground = "#CDD6F4"
+    frame_color = "#FAB387"
     timeout = 30
 
     default_icon = messagebox_critical
