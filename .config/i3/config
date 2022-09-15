@@ -83,11 +83,11 @@ exec_always --no-startup-id pgrep -f '^alacritty -t scratchpad --class fbtop,fbt
 
 # THEME
 # class                   border  backgr. text    indic.   child_border
-client.focused            #96CDFB #96CDFB #0f0f17 #FAE3B0  #96CDFB
-client.focused_inactive   #11111c #0f0f17 #96CDFB #454948  #a6da95
-client.unfocused          #11111c #0f0f17 #96CDFB #454948  #222222
-client.urgent             #F28FAD #FAE3B0 #0f0f17 #96CDFB  #F28FAD
-client.placeholder        #000000 #0c0c0c #96CDFB #000000  #0c0c0c
+client.focused            #89B4FA #89B4FA #151726 #F9E2AF  #89B4FA
+client.focused_inactive   #1F1F30 #151726 #89B4FA #454948  #A6E3A1
+client.unfocused          #1F1F30 #151726 #89B4FA #454948  #222222
+client.urgent             #F38BA8 #F9E2AF #151726 #89B4FA  #F38BA8
+client.placeholder        #000000 #0C0C0C #89B4FA #000000  #0C0C0C
 
 client.background         #151a20
 
