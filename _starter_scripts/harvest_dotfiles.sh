@@ -66,6 +66,7 @@ cp ~/.local/bin/blurlock ${PWD%/*}"/.local/bin/blurlock"
 cp ~/.local/bin/changebrightness ${PWD%/*}"/.local/bin/changebrightness"
 cp ~/.local/bin/changevolume ${PWD%/*}"/.local/bin/changevolume"
 cp ~/.local/bin/lfrun ${PWD%/*}"/.local/bin/lfrun"
+cp ~/.local/bin/papirus-folders ${PWD%/*}"/.local/bin/papirus-folders"
 cp ~/.local/bin/screenshot ${PWD%/*}"/.local/bin/screenshot"
 cp ~/.local/bin/wifimenu ${PWD%/*}"/.local/bin/wifimenu"
 
