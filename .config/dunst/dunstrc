@@ -22,7 +22,7 @@
     highlight = "#96CDFB"
     sort = yes
     idle_threshold = 120
-    font = DaddyTimeMono Nerd Font 11
+    font = DaddyTimeMono Nerd Font 10
     line_height = 0
     markup = full
     format = "<b>%s</b>\n%b"
