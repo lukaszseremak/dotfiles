@@ -31,7 +31,6 @@ rsync -avhr ~/.config/zathura ${PWD%/*}"/.config/" --delete
 echo 'Harvest .bash files.'
 cat ~/.bash_profile >${PWD%/*}"/.bash_profile"
 cat ~/.bashrc >${PWD%/*}"/.bashrc"
-cat ~/.dir_colors >${PWD%/*}"/.dir_colors"
 cat ~/.profile >${PWD%/*}"/.profile"
 
 echo 'Harvest git config files.'

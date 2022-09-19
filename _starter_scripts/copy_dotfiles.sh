@@ -32,7 +32,6 @@ echo 'Copy .bash files.'
 cat ${PWD%/*}"/.bash_profile" >~/.bash_profile
 cat ${PWD%/*}"/.bash_prompt" >~/.bash_prompt
 cat ${PWD%/*}"/.bashrc" >~/.bashrc
-cat ${PWD%/*}"/.dir_colors" >~/.dir_colors
 cat ${PWD%/*}"/.profile" >~/.profile
 
 echo 'Copy git files.'
