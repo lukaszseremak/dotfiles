@@ -75,7 +75,7 @@ exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id mpd --kill; mpd; mpDris2;
 exec_always --no-startup-id killall -USR1 xautolock
 exec_always --no-startup-id nitrogen --restore --set-scaled; sleep 1; picom -b --config ~/.config/picom/picom.conf
-exec_always --no-startup-id pgrep -f '^alacritty -t scratchpad --class fm,fm' || alacritty -t scratchpad --class fm,fm -e lf
+exec_always --no-startup-id pgrep -f '^alacritty -t scratchpad --class fm,fm' || alacritty -t scratchpad --class fm,fm -e bash -ic lf
 exec_always --no-startup-id pgrep -f '^alacritty -t scratchpad --class ttrm,ttrm' || alacritty -t scratchpad --class ttrm,ttrm
 exec_always --no-startup-id pgrep -f '^alacritty -t scratchpad --class mus,mus' || alacritty -t scratchpad --class mus,mus -e ncmpcpp
 exec_always --no-startup-id pgrep -f '^alacritty -t scratchpad --class fbtop,fbtop' || alacritty -t scratchpad --class fbtop,fbtop -e btop
