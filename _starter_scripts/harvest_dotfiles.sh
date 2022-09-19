@@ -67,6 +67,7 @@ cp ~/.local/bin/changevolume ${PWD%/*}"/.local/bin/changevolume"
 cp ~/.local/bin/lfrun ${PWD%/*}"/.local/bin/lfrun"
 cp ~/.local/bin/papirus-folders ${PWD%/*}"/.local/bin/papirus-folders"
 cp ~/.local/bin/screenshot ${PWD%/*}"/.local/bin/screenshot"
+cp ~/.local/bin/vpn_wrapper ${PWD%/*}"/.local/bin/vpn_wrapper"
 cp ~/.local/bin/wifimenu ${PWD%/*}"/.local/bin/wifimenu"
 
 echo "Harvest backgrounds."

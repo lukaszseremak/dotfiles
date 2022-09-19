@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+sudo -K
+
+root_password=$(rofi -password -theme-str '@import "prompt_config.rasi"' -dmenu -p "Sudo Password: ")
+echo "$root_password" | sudo -vS
+
+if sudo -n true 2>/dev/null; then
+	dunstify -u low "Provided Sudo Password is correct."
+else
+	dunstify -u critical "Provided Sudo Password is incorrect." -i "dialog-warning"
+	exit 1
+fi
+
+case $1 in
+connect)
+	token=$(rofi -theme-str '@import "prompt_config.rasi"' -dmenu -p "Microsoft Token: ")
+	echo "$token" | sudo vpnc start && dunstify -u low "Successfully connected to vpn." || dunstify -u critical "Could not connect to vpn." -i "dialog-warning"
+	;;
+disconnect)
+	disconnected=$(sudo vpnc-disconnect)
+	if [ $? -eq 0 ]; then
+		dunstify -u low "Successfully disconnect vpn."
+	else
+		dunstify -u critical "Could not disconnect from vpn: ""$disconnected" -i "dialog-warning"
+	fi
+	;;
+esac
+
+unset root_password
+sudo -K
