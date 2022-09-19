@@ -9,15 +9,15 @@ bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 bindsym $mod+F1 exec playerctl --player=mpd play-pause
 bindsym $mod+F2 exec playerctl --player=mpd previous
 bindsym $mod+F3 exec playerctl --player=mpd next
-bindsym $mod+F10 exec sh ~/.i3/only_laptop.sh
-bindsym $mod+F11 exec sh ~/.i3/home_single_monitor.sh
+bindsym $mod+F10 exec $HOME/.config/i3/only_laptop.sh
+bindsym $mod+F11 exec $HOME/.config/i3/home_single_monitor.sh
 bindsym $mod+Print exec --no-startup-id screenshot
 bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+d --release exec "killall dunst; exec dunstify -i refresh 'restart dunst' -u normal"
 bindsym $mod+d exec --no-startup-id rofi -no-lazy-grab -show drun -modi drun -config ~/.config/rofi/drun_config.rasi
 bindsym $mod+q kill
 bindsym $mod+l exec --no-startup-id blurlock
-bindsym $mod+0 exec ~/.scripts/rofi/powermenu.sh
+bindsym $mod+0 exec $HOME/.scripts/rofi/powermenu.sh
 bindsym $mod+c [class="fm"] scratchpad show; move position center
 bindsym $mod+n [class="ttrm"] scratchpad show; move position center
 bindsym $mod+p [class="mus"] scratchpad show; move position center
@@ -74,7 +74,7 @@ exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id mpd --kill; mpd; mpDris2;
 exec_always --no-startup-id killall -USR1 xautolock
-exec_always --no-startup-id nitrogen --restore --set-scaled; sleep 1; picom -b --config ~/.config/picom/picom.conf
+exec_always --no-startup-id nitrogen --restore --set-scaled; sleep 1; picom -b --config $HOME/.config/picom/picom.conf
 exec_always --no-startup-id pgrep -f '^alacritty -t scratchpad --class fm,fm' || alacritty -t scratchpad --class fm,fm -e bash -ic lf
 exec_always --no-startup-id pgrep -f '^alacritty -t scratchpad --class ttrm,ttrm' || alacritty -t scratchpad --class ttrm,ttrm
 exec_always --no-startup-id pgrep -f '^alacritty -t scratchpad --class mus,mus' || alacritty -t scratchpad --class mus,mus -e ncmpcpp
@@ -161,8 +161,8 @@ smart_borders on
 
 for_window [class="Lxappearance"] floating enable sticky enable border normal
 for_window [class="Nitrogen"] floating enable sticky enable border normal, move position center, border pixel 4
-for_window [class="Pavucontrol"] floating enable resize set 840 480
-for_window [class="qt5ct"] floating enable sticky enable border normal
+for_window [class="Pavucontrol"] floating enable resize set 840 480, move position center
+for_window [class="qt5ct"] floating enable sticky enable border normal, move position center
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 for_window [class="Blueman-manager"] floating enable resize set 840 480, move position center
