@@ -14,6 +14,7 @@ yay -S --needed \
 	btop \
 	catppuccin-gtk-theme-mocha \
 	chromium \
+	cowsay \
 	cmake \
 	curl \
 	dbus \
@@ -197,4 +198,9 @@ sudo usermod -aG video $USER
 echo 'Remove redundant files'
 sudo rm -f /usr/bin/blurlock
 
+echo 'Fetching background.'
+[ -d $HOME"/.backgrounds" ] || mkdir -p $HOME"/.backgrounds"
+wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=129WQiUWVXEGdS_cwiTl79XycG7xFUP1O' -O $HOME"/.backgrounds/wallhaven-0wppgx.png"
+
 echo "##################    Core software installed.    ##################"
+
