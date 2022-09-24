@@ -52,7 +52,7 @@ rsync -avhr /usr/share/fonts/Feather ${PWD%/*}"/.icons/Feather" --delete
 rsync -avhr /usr/share/fonts/fontawesome ${PWD%/*}"/.icons/fontawesome" --delete
 
 echo "Harvest icons."
-rsync -avhr ~/.icons/ ${PWD%/*}"/.icons" --delete
+rsync -avhr ~/.icons/ ${PWD%/*}"/.icons" --delete --exclude "Catppuccin-Mocha-Dark-Cursors"
 
 echo "Harvest custom themes."
 rsync -avhr ~/.themes/ ${PWD%/*}"/.themes" --delete

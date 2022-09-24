@@ -115,11 +115,19 @@ echo 'Setting papirus-folders!'
 [ -d /tmp/papirus-folders ] && rm -rf /tmp/papirus-folders
 mkdir /tmp/papirus-folders
 
-git clone https://github.com/catppuccin/papirus-folders.git /tmp/papirus-folders
+git clone https://github.com/catppuccin/papirus-folders.git --depth 1 /tmp/papirus-folders
 cd /tmp/papirus-folders
 sudo cp -r src/* /usr/share/icons/Papirus
 ./papirus-folders -C cat-mocha-blue --theme Papirus-Dark
 cd -
+
+echo 'Setting  Catppuccin for Cursors!'
+[ -d /tmp/cursors ] && rm -rf /tmp/cursors
+mkdir /tmp/cursors
+
+git clone https://github.com/catppuccin/cursors.git --depth 1 /tmp/cursors
+[ -d $PWD/.icons ] || mkdir -p $HOME"/.icons"
+cp -r /tmp/cursors/src/Catppuccin-Mocha-Dark-Cursors $PWD/.icons
 
 echo 'Enable MPD service.'
 systemctl --user enable --now mpd.service
