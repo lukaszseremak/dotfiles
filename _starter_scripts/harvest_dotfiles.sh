@@ -47,9 +47,8 @@ echo 'Harvest .direnvrc file.'
 cat ~/.direnvrc >${PWD%/*}"/.direnvrc"
 
 echo "Harvest fonts."
-rsync -avhr /usr/share/fonts/DaddyTimeMono ${PWD%/*}"/.icons/DaddyTimeMono" --delete
-rsync -avhr /usr/share/fonts/Feather ${PWD%/*}"/.icons/Feather" --delete
-rsync -avhr /usr/share/fonts/fontawesome ${PWD%/*}"/.icons/fontawesome" --delete
+rsync -avhr ~/.fonts/DaddyTimeMono ${PWD%/*}"/.fonts/" --delete
+rsync -avhr ~/.fonts/Feather ${PWD%/*}"/.fonts/" --delete
 
 echo "Harvest icons."
 rsync -avhr ~/.icons/ ${PWD%/*}"/.icons" --delete --exclude "Catppuccin-Mocha-Dark-Cursors"

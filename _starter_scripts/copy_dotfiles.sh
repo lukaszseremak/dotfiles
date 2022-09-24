@@ -48,7 +48,7 @@ echo 'Copy .direnvrc file.'
 cat ${PWD%/*}"/.direnvrc" >~/.direnvrc
 
 echo "Copy fonts."
-sudo bash -c 'cp -r ${PWD%/*}"/.fonts/"* "/usr/share/fonts/"'
+cp -r ${PWD%/*}"/.fonts/"* ~/.fonts/
 
 echo "Copy icons."
 cp -r ${PWD%/*}"/.icons/"* ~/.icons/
