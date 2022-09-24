@@ -50,7 +50,7 @@ return packer.startup(function(use)
 	use("folke/which-key.nvim")
 	use("lewis6991/impatient.nvim")
 	use("lukas-reineke/indent-blankline.nvim")
-	use("startup-nvim/startup.nvim")
+	use("lukaszseremak/startup.nvim")
 	use("lambdalisue/suda.vim")
 	use({
 		"jghauser/mkdir.nvim",
