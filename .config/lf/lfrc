@@ -18,6 +18,10 @@ cmd mkfile ${{
   $EDITOR $ans
 }}
 
+cmd delete ${{
+  ~/.scripts/lf/delete.sh "$fx"
+}}
+
 
 cmd unarchive ${{
   case "$f" in
