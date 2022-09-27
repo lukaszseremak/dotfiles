@@ -79,3 +79,28 @@ pipenv --python $(pyenv which python)
 ```bash
 pipenv install --dev neovim pynvim
 ```
+
+### 5. Proxy
+- set in /etc/profile.d/proxy.sh
+```sh
+proxy() {
+    export auto_proxy="http://proxyconf.../proxy.pac"
+    export http_proxy="http://address:8080"
+    export https_proxy="${http_proxy}"
+    export ftp_proxy="${http_proxy}"
+    export rsync_proxy="${http_proxy}"
+    export no_proxy="0.0.0.0,localhost,127.0.0.1,..."
+    export AUTO_PROXY="${auto_proxy}"
+    export HTTP_PROXY="${http_proxy}"
+    export HTTPS_PROXY="${http_proxy}"
+    export FTP_PROXY="${http_proxy}"
+    export RSYNC_PROXY="${http_proxy}"
+    export NO_PROXY="${no_proxy}"
+}
+
+noproxy() {
+    unset $(env | awk -F'=' '/_proxy/ { print $1 }')
+}
+
+proxy
+```
