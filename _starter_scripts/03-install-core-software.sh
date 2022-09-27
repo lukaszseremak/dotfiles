@@ -150,7 +150,7 @@ yay -S --needed \
 	gnome-epub-thumbnailer \
 	gnumeric \
 	imagemagick \
-	lf \
+	lf-bin \
 	odt2txt \
 	perl-image-exiftool \
 	poppler \

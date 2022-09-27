@@ -19,7 +19,7 @@ cmd mkfile ${{
 }}
 
 cmd delete ${{
-  ~/.scripts/lf/delete.sh "$fx"
+  ~/.scripts/lf/delete.sh $fx
 }}
 
 

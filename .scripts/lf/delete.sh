@@ -7,6 +7,7 @@ animal="vader"
 
 # clear
 echo -e "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n${light_purple}"
+
 for file in "$@"; do
 	file_name=$(basename "$file")
 
@@ -22,6 +23,7 @@ for file in "$@"; do
 
 	echo -e "$file_icon $file_name $(du -sh "$file" | awk '{print $1}')"
 done | cowsay -f "$animal" -n
+
 
 echo -e "${light_blue}"
 read -p "${bold}Do you want to delete it? [y/n]: " -n1 ans
