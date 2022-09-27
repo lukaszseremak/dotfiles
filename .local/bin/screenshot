@@ -1,5 +1,5 @@
 #! /bin/sh
-output='/home/seremak/Pictures/screenshots/%Y_%m_%d_%H%M%S_screenshot.png'
+output=$HOME'/Pictures/screenshots/%Y_%m_%d_%H%M%S_screenshot.png'
 
 #### Options ###
 select=""
