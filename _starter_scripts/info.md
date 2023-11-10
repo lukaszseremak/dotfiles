@@ -28,6 +28,12 @@
   ```sh
   gpg --keyserver-options "timeout=10 http-proxy=$http_proxy" --recv-keys "key_here"
   ```
+- fix for signatures are "unknown trust" even after importing PGP keys
+  ```sh
+  rm -rf /etc/pacman.d/gnupg
+  sudo pacman-key --init
+  sudo pacman-key --populate archlinux
+  ```
 - change icons and themes
   ```sh
   lxappearance
