@@ -30,9 +30,11 @@
   ```
 - fix for signatures are "unknown trust" even after importing PGP keys
   ```sh
-  rm -rf /etc/pacman.d/gnupg
+  sudo rm -rf /etc/pacman.d/gnupg
+  sudo pacman-key --lsign-key EndeavourOS
   sudo pacman-key --init
   sudo pacman-key --populate archlinux
+  sudo pacman -Sy endeavouros-keyring && sudo pacman -Syu 
   ```
 - change icons and themes
   ```sh
