@@ -10,3 +10,4 @@ sudo systemctl enable docker.service
 
 echo 'Add user to the docker group!'
 sudo usermod -aG docker $USER
+sudo chmod 666 /var/run/docker.sock

@@ -20,6 +20,7 @@ yay -S --needed \
 	dbus \
 	diff-so-fancy \
 	direnv \
+	docker-compose \
 	docker-ls \
 	downgrade \
 	dunst \
@@ -29,6 +30,7 @@ yay -S --needed \
 	fzf \
 	gimp \
 	git \
+  go \
 	go-md2man \
 	google-chrome \
 	gtk3 \
@@ -179,7 +181,6 @@ python -m pipx install --force autoflake
 python -m pipx install --force black
 python -m pipx install --force completions
 python -m pipx install --force djhtml
-python -m pipx install --force docker-compose
 python -m pipx install --force doq
 python -m pipx install --force flake8
 python -m pipx install --force httpie
