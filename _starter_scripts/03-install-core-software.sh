@@ -3,6 +3,8 @@ set -eo pipefail
 
 echo "Install packages using yay."
 yay -S --needed \
+	bat \
+	imagemagick \
 	acpi \
 	acpid \
 	alacritty \
@@ -30,8 +32,8 @@ yay -S --needed \
 	fzf \
 	gimp \
 	git \
-  go \
-	go-md2man \
+    go \
+    go-md2man \
 	google-chrome \
 	gtk3 \
 	gtk4 \
@@ -114,22 +116,11 @@ yay -S --needed \
 	zip
 
 echo 'Setting papirus-folders!'
-[ -d /tmp/papirus-folders ] && rm -rf /tmp/papirus-folders
-mkdir /tmp/papirus-folders
-
-git clone https://github.com/catppuccin/papirus-folders.git --depth 1 /tmp/papirus-folders
-cd /tmp/papirus-folders
-sudo cp -r src/* /usr/share/icons/Papirus
-./papirus-folders -C cat-mocha-blue --theme Papirus-Dark
-cd -
+yay -S papirus-folders-catppuccin-git
+papirus-folders -C cat-mocha-blue --theme Papirus-Dark
 
 echo 'Setting  Catppuccin for Cursors!'
-[ -d /tmp/cursors ] && rm -rf /tmp/cursors
-mkdir /tmp/cursors
-
-git clone https://github.com/catppuccin/cursors.git --depth 1 /tmp/cursors
-[ -d $PWD/.icons ] || mkdir -p $HOME"/.icons"
-cp -r /tmp/cursors/src/Catppuccin-Mocha-Dark-Cursors $PWD/.icons
+yay -S catppuccin-cursors-mocha
 
 echo 'Enable MPD service.'
 systemctl --user enable --now mpd.service
@@ -142,27 +133,8 @@ gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal alacri
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal keybindings '<Ctrl><Alt>t'
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal new-tab true
 
-echo "Install lf with gadgets."
-yay -S --needed \
-	bat \
-	catdoc \
-	chafa \
-	docx2txt \
-	ffmpegthumbnailer \
-	gnome-epub-thumbnailer \
-	gnumeric \
-	imagemagick \
-	lf-bin \
-	odt2txt \
-	perl-image-exiftool \
-	poppler \
-	transmission-cli \
-	transmission-gtk \
-	ueberzug \
-	wkhtmltopdf
-
 echo 'Upgrade pip version.'
-pip install --upgrade pip
+yay -S python-pip
 
 echo 'Install pyenv.'
 curl https://pyenv.run | bash
@@ -172,7 +144,7 @@ python -m pip install --user pipx
 python -m pipx ensurepath
 
 echo 'Upgrade pipx version.'
-python -m pip install --user -U pipx
+yay -S python-pipx
 
 echo 'Install python required packages using pipx.'
 python -m pipx install --force 'python-lsp-server[all]'
@@ -196,7 +168,7 @@ python -m pipx install --force tox
 python -m pipx install --force yapf
 
 echo 'Install nvim required packages.'
-pip install --user pynvim
+yay -S python-pynvim
 npm config set prefix '~/.local/'
 npm i -g bash-language-server
 npm i -g neovim

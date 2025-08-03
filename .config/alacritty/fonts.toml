@@ -1,0 +1,14 @@
+[font]
+size = 12
+
+[font.bold]
+family = "DaddyTimeMono Nerd Font"
+
+[font.bold_italic]
+family = "DaddyTimeMono Nerd Font"
+
+[font.italic]
+family = "DaddyTimeMono Nerd Font"
+
+[font.normal]
+family = "DaddyTimeMono Nerd Font"
